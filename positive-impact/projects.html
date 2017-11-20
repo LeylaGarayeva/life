@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Organization">
+
+<!-- Mirrored from www.onelife.eu/en/positive-impact/projects by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2017 07:08:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="keywords" content="" />
+<meta property="og:description" content="OneLife Description" /> <meta itemprop="description" content="OneLife Description"> <meta name="twitter:description" content="OneLife Description" />
+<meta property="og:image" content="../../bundles/onecoinonelifeopen/images/logo.png" /> <meta property="og:image:width" content="300px" /> <meta property="og:image:height" content="200px" /> <meta itemprop="image" content="../../bundles/onecoinonelifeopen/images/logo.png" /> <meta name="twitter:image" content="../../bundles/onecoinonelifeopen/images/logo.png" />
+<meta property="og:title" content="Projects | OneLife" /> <meta itemprop="name" content="Projects | OneLife" /> <meta name="twitter:title" content="Projects | OneLife" /> <title>Projects | OneLife</title>
+<link rel="icon" href="https://www.onelife.eu/favicon.ico?201710241251" type="image/x-icon" />
+<link rel="stylesheet" href="../../assets/css/compiledab8e.css?201710241251" />
+<script src="../../assets/js/compiledab8e.js?201710241251"></script>
+</head>
+<body itemtype="http://schema.org/WebPage" itemscope="">
+<div class="site-size">
+<header class="main-header" itemtype="http://schema.org/WPHeader" itemscope="">
+<div class="top-line">
+<div class="container">
+
+<div class="modal fade" id="login-modal" role="dialog">
+<div class="modal-dialog">
+
+<div class="modal-content">
+<div class="modal-header login-modal-header">
+<button type="button" class="close" data-dismiss="modal">X</button>
+<h4 id="loginModalLabel" class="modal-title text-center">User authentication</h4>
+</div>
+<div class="modal-body">
+<div class="login-tab" role="tabpanel">
+
+<ul role="tablist" class="nav nav-tabs">
+<li class="active" role="presentation">
+<a data-toggle="tab" role="tab" aria-controls="signin" href="#signin" id="signin-taba" aria-expanded="true">
+Sign in
+</a>
+</li>
+<li role="presentation" class="">
+<a data-toggle="tab" role="tab" aria-controls="email-verification" href="#email-verification" id="email-verification-taba" aria-expanded="false">
+Send an email verification
+</a>
+</li>
+<li role="presentation" class="">
+<a data-toggle="tab" role="tab" aria-controls="forget_password" href="#forget_password" id="forgetpass-taba" aria-expanded="false">
+Forgot Password
+</a>
+</li>
+</ul>
+
+<div class="tab-content">
+<div id="signin" class="tab-pane text-center active" role="tabpanel">
+&nbsp;&nbsp;
+<span style="display: none;" class="response_error" id="login_fail">Login failed, please try again</span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/accounts/login/" method="POST" data-captcha="/captcha" data-recaptcha="/captcha?token=">
+<div class="form-group">
+<span id="login-error" class="col-xs-12 alert-danger help-block has-error color-red bold"></span>
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" name="username_login" id="login_username" class="form-control" tabindex="1">
+</div>
+<span id="login-username-error" class="help-block has-error"></span>
+</div>
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-lock"></i></div>
+<input type="password" placeholder="Password" name="password" id="password" class="form-control" tabindex="2">
+</div>
+<span id="password-error" class="help-block has-error"></span>
+</div>
+<div class="form-group mb-20 capcha">
+<div class="row">
+<div id="capcha-new-image" class="col-xs-8 no-robot border">
+<img id="capcha-image" src="#" alt="" style="width: 100%;" />
+</div>
+<div class="col-xs-3 no-robot border">
+<a href="#" class="">
+<i id="recaptcha" class="fa fa-refresh fa-4x"></i>
+</a>
+</div>
+<div class="col-xs-12 mt-10">
+<input id="captcha" name="captcha" type="text" class="form-control" tabindex="3">
+</div>
+</div>
+ </div>
+<button type="button" data-loading-text="Signing In...." class="btn red-btn btn-block bt-login" id="login_btn">
+Login
+</button>
+<input type="hidden" name="_csrf_token" value="0qF71DrCd8uYW_qT-VPQDceaHspUICCpYm-RW3V81kc">
+</form>
+</div>
+<div id="email-verification" class="tab-pane" role="tabpanel">
+&nbsp;&nbsp;
+<span style="display: none;" class="response_error" id="registration_fail">Failed, please try again</span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/accounts/sendVerEmail/" method="POST">
+<div class="form-group">
+<div id="verification_form_error" class="col-xs-12 alert-danger bottom10"></div>
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" id="femail" name="ver_code_username" class="form-control">
+</div>
+<span id="femail-error" data-error="0" class="help-block has-error"></span>
+</div>
+<button data-loading-text="Sending...." class="btn red-btn btn-block bt-login" id="send_verification_mail" type="button">
+Send
+</button>
+</form>
+</div>
+<div id="forget_password" class="tab-pane text-center" role="tabpanel">
+&nbsp;&nbsp;
+<span class="col-xs-12 alert-danger bottom10" id="reset_fail"></span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/profile/changePasswordStep1">
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" id="username" name="username" class="form-control">
+</div>
+<span id="username-error" data-error="0" class="help-block has-error"></span>
+</div>
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-at"></i></div>
+ <input type="text" name="email" placeholder="Email" id="remail" class="form-control">
+</div>
+<span id="remail-error" data-error="0" class="help-block has-error"></span>
+</div>
+<button data-loading-text="Please wait...." class="btn red-btn btn-block bt-login" id="reset_btn" type="button">
+Forgot Password
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="pull-right">
+<div class="topbar-search dropdown">
+<a href="#" class="dropdown-toggle white" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-lg fa-search"></i></a>
+<ul class="dropdown-menu pull-right">
+<li>
+<form name="" method="get" action="https://www.onelife.eu/en/search" class="input-group" data="js-search-form.html">
+<input type="search" id="search" name="search" required="required" class="form-control" placeholder="Search" />
+<span class="input-group-btn">
+<button class="btn btn-default"><i class="fa fa-search"></i></button>
+</span>
+</form>
+</li>
+</ul>
+</div>
+</div>
+<div class="languge pull-right pt-5">
+<div class="btn-group">
+<button type="button" class="language-dropdown-toggle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<span class="lang-ico pull-left" style="background-image:url('../../uploads/media/default/0001/01/thumb_555_default_very_small.png')"></span>
+</button>
+<div class="dropdown-menu dropdown-menu-lang pl-10 pr-10">
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="en" href="projects.html">
+<img src="../../uploads/media/default/0001/01/9a4b418c8c91f5216ae78864bf0ae59a178862b0.png" width="20" class="mr-5" alt="" />
+English
+</a>
+ <a class="dropdown-item block mb-5" rel="alternate" hreflang="zh" href="https://www.onelife.eu/zh/positive-impact/projects">
+<img src="../../uploads/media/default/0001/01/c4c40a553977a0364aeb4e3d7ecd20ac40778db1.png" width="20" class="mr-5" alt="" />
+简体中文
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="es" href="https://www.onelife.eu/es/positive-impact/projects">
+<img src="../../uploads/media/default/0001/01/03a563bc29cdb439d57d6a67762d83555b777848.png" width="20" class="mr-5" alt="" />
+Español
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="pt" href="https://www.onelife.eu/pt/positive-impact/projects">
+<img src="../../uploads/media/default/0001/01/1538ac2107f7b338495087cb45c8919d47819aa4.png" width="20" class="mr-5" alt="" />
+Português
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="ru" href="https://www.onelife.eu/ru/positive-impact/projects">
+<img src="../../uploads/media/default/0001/01/68ddeb3c998439c4ef5950b88ac517bd1dd794a0.png" width="20" class="mr-5" alt="" />
+Russian
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="de" href="https://www.onelife.eu/de/positive-impact/projects">
+<img src="../../uploads/media/default/0001/01/a344e1d1889f05951af0c61f2402e9a6c4f6ce63.png" width="20" class="mr-5" alt="" />
+German
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="ja" href="https://www.onelife.eu/ja/positive-impact/projects">
+<img src="../../uploads/media/default/0001/01/309ff6dacc9bbd54a0de4ca349fbbf176a7273bc.png" width="20" class="mr-5" alt="" />
+日本語
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-line">
+<div class="container">
+<div class="row">
+<nav class="navbar" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+<a class="navbar-brand navbar-left" href="../index.html">
+ <img title="" alt="oneLife" src="../../bundles/onecoinonelifeopen/images/logoab8e.png?201710241251" itemprop="logo" class="logo">
+</a>
+
+</div>
+<div id="navbar" class="collapse navbar-collapse">
+<ul class="nav navbar-nav  navbar-right">
+<li class="first"> <a href="../index.html">
+Home
+</a>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+About
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="../about.html">
+Our culture
+</a>
+</li>
+<li class="last"> <a href="../faq.html">
+FAQ
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Membership
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="../oneacademy.html">
+oneacademy
+</a>
+</li>
+<li> <a href="../onecoincloud.html">
+onecoincloud
+</a>
+</li>
+<li> <a href="../onetablet.html">
+onetablet
+</a>
+</li>
+<li class="last"> <a href="../signup.html">
+Join us
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Media Center
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="../news.html">
+News &amp; Press Releases
+</a>
+</li>
+<li> <a href="../press-room.html">
+Press Room
+</a>
+</li>
+<li class="last"> <a href="../resource-center.html">
+Resources
+</a>
+</li>
+</ul>
+</li>
+<li> <a href="../opportunity.html">
+Opportunity
+</a>
+</li>
+<li class="active dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Positive impact
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="mission.html">
+Our mission
+</a>
+</li>
+<li class="active last"> <a href="projects.html">
+Our projects
+</a>
+</li>
+</ul>
+</li>
+<li> <a href="../blog.html">
+Blog
+</a>
+</li>
+<li class="last"> <span>
+<button type="button" id="loginBtn" class="btn red-btn login-btn btn-lg" data-toggle="modal" data-target="#login-modal">LOGIN
+</button>
+</span>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<div class="border-bottom wallpaper-inner" style="background-image: url(../../uploads/media/default/0001/01/f11d24d645c8d9e4b3992fa93eb9b77d04366ffa.jpg);">
+<div class="relative">
+<div class="inner-position">
+<h1 class="header-big uppercase font-bebas-bold">
+</h1>
+<div class="text">
+</div>
+</div>
+</div>
+</div>
+<section class="owf-section text-center owf-bg2">
+<div class="container">
+<div class="main-title">
+<div class="mb-20 mobile-none text-center"><img src="../../uploads/media/default/0001/01/40b9901eda3734a95c9f90ce49ee09d93d436ee3.png" alt="" width="80" /></div>
+<h2>PROJECTS</h2>
+<div class="line"></div>
+</div>
+<div class="fs-25 mb-40">
+<p>We are committed to support talent and invest in the well-being of future generations. The OneWorld Foundation supports initiatives and activities that are dedicated to the concept of empowering children through education and personal development.</p>
+</div>
+</div>
+</section>
+<section class="year-book-section">
+<div class="container">
+<iframe height="400" src="https://s3.amazonaws.com/online.fliphtml5.com/jnwa/ixjf/index.html#p=1" frameborder="0" allowfullscreen allowtransparency></iframe>
+</div>
+</section>
+<section class="owf-section text-center owf-bg1">
+<div class="container">
+<div class="main-title">
+<h2>Recent projects</h2>
+<div class="line"></div>
+</div>
+<div class="">
+<ul class="nav nav-tabs" id="projects-tab">
+<li class="active">
+<a data-target="#project1" data-toggle="tab">
+Project1
+</a>
+</li>
+<li>
+<a data-target="#project2" data-toggle="tab">
+Project2
+</a>
+</li>
+ <li>
+<a data-target="#project3" data-toggle="tab">
+Project3
+</a>
+</li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="project1">
+<div class="row">
+<div class="col-sm-6">
+<a href="http://oneworldfoundation.eu/en/project/owf_provides_second_hope_to_girls_in_pakistan" target="_blank" class="thumb">
+<img class="img-responsive" src="../../uploads/media/default/0001/01/b74bfca634d89dfcf3c3ac47571ac4146f23989a.jpg">
+</a>
+</div>
+<div class="col-sm-6 owf-projects">
+<h3>
+Girls Second Hope Initiative
+</h3>
+<p class="fs-25">
+<p>OWF has joined hands with the Women Development &amp; Community Organization to provide education to girls from the isolated areas of Baluchistan, Pakistan. Baluchistan is the province&nbsp;with the lowest literacy rates in Pakistan. The lack of schools, the poor infrastructure and facilities, make the situation even worse. Girls are the ones who suffer the most due to extreme poverty, cultural norms and lack of income. In addition, secondary schools are very few and are often located at distant places. For example, there is one secondary school per 11 primary schools. What is more, every fifth child has to travel more than 30 minute and every eight child has to travel at least one hour to school.&nbsp;<br />
+<br />
+Through the Girls Second Hope Initiative, we would like to focus on girls who do not have access to secondary education. Support will be provided to 4 secondary schools where teachers will receive training and girls will be encouraged to continue with their education. Moreover girls threatened from dropping out will receive material and coaching support. Awareness and enrollment campaigns will be organized at a community level to facilitate the transition of the girls into secondary education.&nbsp;<br />
+<br />
+It is expected that the project will benefit a total number of 500 students and 20 teachers from Sohbat Pur and Hamid Pur, Baluchistan.</p>
+<a href="http://oneworldfoundation.eu/en/project/owf_provides_second_hope_to_girls_in_pakistan" target="_blank" class="pull-right">
+read more &#187;
+</a>
+</p>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="project2">
+<div class="row">
+<div class="col-sm-6">
+<a href="#" class="thumb">
+<img class="img-responsive" src="../../uploads/media/default/0001/01/162f38d9a05861e393f1750c71c4054bb2bb2ecc.jpg">
+</a>
+</div>
+<div class="col-sm-6 owf-projects">
+<h3>
+Water &amp; Sanitation Programme
+</h3>
+<p class="fs-25">
+<p>OneWorld Foundation continues with its Water &amp; Sanitation Programme. This time we&#39;ve partnered with Vicony&#39;s Global Success World NGO (VGSW) in Northern Cameroon. The Bome valley is an isolated community in one of the least developed Divisions of the North West Region of Cameroon. This community has a secondary school and five primary schools whose infrastructure and toilet facilities are in a deplorable state. After several incidents due to the&nbsp;poor state of the sanitation facilities, the head teachers of the schools have banned the use of the toilets. This has led many pupils to seek privacy in nearby bushes, abandoned constructions and water streams. In this way, diseases are easily spread, affecting more and more students. What is more, there are even cases of students bitten by snakes.&nbsp;</p>
+<p>With the support received by OWF, our partners from VGSW will be able to construct gender sensitive latrines for girls and boys in the Bome valley. The latrines will be used by 180 primary school students and 10 teachers. &nbsp;They will have a safe, clean and comfortable place to use instead of using bushes. Students will also receive training on the importance of proper hygiene and sanitation. Teachers will be encouraged to raise awareness of preventable diseases. Primary school students will learn how important hygiene is and how washing their hands can reduce the risk of getting sick.</p>
+<a href="http://oneworldfoundation.eu/en/project/owf_launches_water_and_sanitation_programme" class="pull-right">
+read more
+</a>
+</p>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="project3">
+<div class="row">
+<div class="col-sm-6">
+<a href="#" class="thumb">
+<img class="img-responsive" src="../../uploads/media/default/0001/01/11e97c36c80e46b225527c15dd5b07d7b4670e05.jpg">
+</a>
+</div>
+<div class="col-sm-6 owf-projects">
+<h3>
+THE STORY OF A RESCUED CHILD WORKER
+</h3>
+<p class="fs-25">
+<p>Sonam Tamang is a 10 year old girl. She was living with her employer at Sinamangal, Kathmandu. Her father and mother live in a remote area of eastern Nepal. The girl was rescued by CWISH, Nepal in coordination with the District Child Welfare Board (DCWB). She was provided psycho-social counseling support. During the sessions she shared all that happened to her in that house.<br />
+<br />
+Though she was enrolled in the nearby school she was not send to school by her employer. She &nbsp;was living in a small congested room having no windows and ventilation. She had to wake up early in the morning and do all the domestic work at the house, was fed only rice with salt. Sonam did not get the chance to communicate with her family and was frequently scolded and bitten by her employer.<br />
+<br />
+After she was rescued from that awful place, Sonam was sent to a transit home where she will be safe until the case is resolved and her family brings her back to her real home.&nbsp;<br />
+<br />
+There are thousands of stories like this one. Therefore, the OneWorld Foundation is committed to provide financial assistance to organizations such as CWISH, Nepal that are working hard every day, in order to provide life-saving support to child workers.</p>
+<a href="http://oneworldfoundation.eu/en/project/owf_funds_rescue_operations_for_child_workers" class="pull-right">
+read more
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bgr-section new-height text-center mb-40 owf">
+<div class="inner-bgr" style="background-image: url(../../bundles/onecoinonelifeopen/images/img8ab8e.jpg?201710241251);">
+<h4 class="mobile-none">Learn more about what we do and how we can contribute to your region </h4>
+<a href="http://oneworldfoundation.eu/en/" target="_blank" class="mt-20">Donate now</a>
+</div>
+</section>
+<footer class="main-footer clearfix" itemtype="http://schema.org/WPFooter" itemscope="">
+<section class="link-section">
+<div class="container">
+<div class="row footer-navi-holder">
+<div class="col-xs-2 col-xs-offset-1 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">Site map</h3>
+<ul>
+<li><a href="../index.html"><i class="fa fa-angle-right"></i>&nbsp;Home
+</a></li>
+<li><a href="../about.html"><i class="fa fa-angle-right"></i>&nbsp;About</a></li>
+<li><a href="https://www.onelife.eu/user/signup"><i class="fa fa-angle-right"></i>&nbsp;Membership</a></li>
+<li><a href="../opportunity.html"><i class="fa fa-angle-right"></i>&nbsp;Opportunity</a></li>
+<li><a href="mission.html"><i class="fa fa-angle-right"></i>&nbsp;Positive Impact</a>
+</li>
+<li><a href="../blog.html"><i class="fa fa-angle-right"></i>&nbsp;Blog</a>
+</li>
+<li id="backoffice-login">
+<a href="javascript:void(0);">
+<i class="fa fa-angle-right"></i>&nbsp;Backoffice
+</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">&nbsp;AFFILIATED SITES</h3>
+<ul>
+<li class="first"> <a href="http://oneworldfoundation.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneWorld Foundation</a>
+</li>
+<li> <a href="https://www.oneacademy.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneAcademy</a>
+</li>
+<li> <a href="https://onecoin.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneCoin</a>
+</li>
+<li class="last"> <a href="https://www.onelifeevents.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneLife events</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">&nbsp;Media Center</h3>
+<ul>
+<li class="first"> <a href="../news.html"> <i class="fa fa-angle-right"></i>&nbsp;News</a>
+</li>
+<li> <a href="../press-room.html"> <i class="fa fa-angle-right"></i>&nbsp;Press Room</a>
+</li>
+<li class="last"> <a href="../resource-center.html"> <i class="fa fa-angle-right"></i>&nbsp;Resources</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">legal</h3>
+<ul>
+<li class="first"> <a href="../ima-agreement.html"> <i class="fa fa-angle-right"></i>&nbsp;IMA Agreement</a>
+</li>
+<li> <a href="http://onelife.eu/en/terms-and-conditions"> <i class="fa fa-angle-right"></i>&nbsp;T&amp;C</a>
+</li>
+<li> <a href="http://onelife.eu/en/global-compensation-plan"> <i class="fa fa-angle-right"></i>&nbsp;Global Comp. Plan</a>
+</li>
+<li class="last"> <a href="../aml-policy.html"> <i class="fa fa-angle-right"></i>&nbsp;AML Policy</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">Help</h3>
+<ul>
+<li class="first"> <a href="http://support.onecoin.eu/User/Login"> <i class="fa fa-angle-right"></i>&nbsp;Support</a>
+</li>
+<li> <a href="http://onelife.eu/en/contacts"> <i class="fa fa-angle-right"></i>&nbsp;Contact Us</a>
+</li>
+<li class="last"> <a href="../faq.html"> <i class="fa fa-angle-right"></i>&nbsp;FAQ</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-9 mb-30 bg-phone">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">download the onelife network app:</h3>
+<div class="row">
+<div class="col-sm-7">
+<div class="row">
+<div class="col-sm-4 col-xs-4 relative">
+<div class="">
+<a href="https://static.onelife.eu/OneLife-0.2.apk" target="_blank" class=""><img src="../../bundles/onecoinonelifeopen/images/qr-onelifeab8e.jpg?201710241251" alt="android qrcode" class="qrcode-img" /></a>
+</div>
+</div>
+<div class="col-sm-8 col-xs-8">
+<div class="clearfix mb-15">
+<a target="_blank" href="https://play.google.com/store/apps/details?id=com.onelife.backend" class="pull-left mb-5 mr-5"><img src="../../bundles/onecoinonelifeopen/images/google-playab8e.png?201710241251" alt="google play" /></a>
+<a target="_blank" href="https://itunes.apple.com/app/onelife-mobile/id1124062828" class="pull-left mb-5 "><img src="../../bundles/onecoinonelifeopen/images/app-storeab8e.png?201710241251" alt="app store" /></a>
+</div>
+&lt; Direct download for Android
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">Social media:</h3>
+<div class="mb-10 social-links relative">
+<a href="https://www.facebook.com/One-Life-Network-1087166041305845/?fref=ts" target="_blank" class="">
+ <img src="../../uploads/media/default/0001/01/b3448a74e5d87e16f637f69dc019d6679d32592b.png" alt="facebook" />
+</a>
+<a href="https://twitter.com/OneLife_Network" target="_blank" class="">
+<img src="../../uploads/media/default/0001/01/4b1b3ee93f72e40dcd46cd5ead7aced974071d20.png" alt="twitter" />
+</a>
+<a href="https://www.instagram.com/onelifenetworkofficial/" target="_blank" class="">
+<img src="../../uploads/media/default/0001/01/2d9f901f43465d23ae5646e65951e9ccef2be6b2.png" alt="instagram" />
+</a>
+<a href="https://www.youtube.com/channel/UC8fIpkNowRTSxwbOsYF1Wuw" target="_blank" class="">
+<img src="../../uploads/media/default/0001/01/b8a7ad1b67417aec7c5d5b9a21606a6911207689.png" alt="youtube" />
+</a>
+<a href="#" target="_blank" class="">
+<img src="../../uploads/media/default/0001/01/16a6892db9439f3a3817636397a1a98164621fc1.png" alt="" />
+</a>
+<a href="#" target="_blank" class="">
+<img src="../../uploads/media/default/0001/01/56632ebbd123485dcd328464d1f6b58e1815eb1c.png" alt="" />
+</a>
+<a href="javascript:void(0)" target="_blank" class="wechat-link">
+<img src="../../uploads/media/default/0001/01/thumb_553_default_very_small.png" alt="WeChat" />
+</a>
+<img src="../../uploads/media/default/0001/01/thumb_571_default_big.png" alt="" class="wechat-qr" />
+<a href="http://i.youku.com/i/UMzgxMzQ2NTc2OA==" target="_blank" class="">
+<img src="../../uploads/media/default/0001/01/33c605ff8abb8effc1d8e1f88201360c566a06ff.png" alt="youku" />
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="text-center mt-35 mb-35 bottom">
+<a href="../index.html" class="block mb-20">
+<img src="../../bundles/onecoinonelifeopen/images/logo-footerab8e.png?201710241251" alt="" class="logo-footer" width="300" />
+</a>
+<p>© onelife.eu</p>
+<p class="mt-15 fs-12">
+<em>
+ONELIFE NETWORK LTD, 2118 Guava Street, Belama Phase I, Belize City, Belize<br />
+</em>
+</p>
+</div>
+</footer>
+<script>
+                    (function (i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r;
+                        i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                        a = s.createElement(o),
+                                m = s.getElementsByTagName(o)[0];
+                        a.async = 1;
+                        a.src = g;
+                        m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', '../../../www.google-analytics.com/analytics.js', 'ga');
+
+                    ga('create', 'UA-54134897-2', 'auto');
+                    ga('send', 'pageview');
+
+                </script>
+</div>
+</body>
+
+<!-- Mirrored from www.onelife.eu/en/positive-impact/projects by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2017 07:08:48 GMT -->
+</html>

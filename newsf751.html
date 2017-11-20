@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Organization">
+
+<!-- Mirrored from www.onelife.eu/en/news?category=1&page=2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2017 07:13:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="keywords" content="" />
+<meta property="og:description" content="OneLife Description" /> <meta itemprop="description" content="OneLife Description"> <meta name="twitter:description" content="OneLife Description" />
+<meta property="og:image" content="../bundles/onecoinonelifeopen/images/logo.png" /> <meta property="og:image:width" content="300px" /> <meta property="og:image:height" content="200px" /> <meta itemprop="image" content="../bundles/onecoinonelifeopen/images/logo.png" /> <meta name="twitter:image" content="../bundles/onecoinonelifeopen/images/logo.png" />
+<meta property="og:title" content="News | OneLife" /> <meta itemprop="name" content="News | OneLife" /> <meta name="twitter:title" content="News | OneLife" /> <title>News | OneLife</title>
+<link rel="icon" href="https://www.onelife.eu/favicon.ico?201710241251" type="image/x-icon" />
+<link rel="stylesheet" href="../assets/css/compiledab8e.css?201710241251" />
+<script src="../assets/js/compiledab8e.js?201710241251"></script>
+</head>
+<body itemtype="http://schema.org/WebPage" itemscope="">
+<div class="site-size">
+<header class="main-header" itemtype="http://schema.org/WPHeader" itemscope="">
+<div class="top-line">
+<div class="container">
+
+<div class="modal fade" id="login-modal" role="dialog">
+<div class="modal-dialog">
+
+<div class="modal-content">
+<div class="modal-header login-modal-header">
+<button type="button" class="close" data-dismiss="modal">X</button>
+<h4 id="loginModalLabel" class="modal-title text-center">User authentication</h4>
+</div>
+<div class="modal-body">
+<div class="login-tab" role="tabpanel">
+
+<ul role="tablist" class="nav nav-tabs">
+<li class="active" role="presentation">
+<a data-toggle="tab" role="tab" aria-controls="signin" href="#signin" id="signin-taba" aria-expanded="true">
+Sign in
+</a>
+</li>
+<li role="presentation" class="">
+<a data-toggle="tab" role="tab" aria-controls="email-verification" href="#email-verification" id="email-verification-taba" aria-expanded="false">
+Send an email verification
+</a>
+</li>
+<li role="presentation" class="">
+<a data-toggle="tab" role="tab" aria-controls="forget_password" href="#forget_password" id="forgetpass-taba" aria-expanded="false">
+Forgot Password
+</a>
+</li>
+</ul>
+
+<div class="tab-content">
+<div id="signin" class="tab-pane text-center active" role="tabpanel">
+&nbsp;&nbsp;
+<span style="display: none;" class="response_error" id="login_fail">Login failed, please try again</span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/accounts/login/" method="POST" data-captcha="/captcha" data-recaptcha="/captcha?token=">
+<div class="form-group">
+<span id="login-error" class="col-xs-12 alert-danger help-block has-error color-red bold"></span>
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" name="username_login" id="login_username" class="form-control" tabindex="1">
+</div>
+<span id="login-username-error" class="help-block has-error"></span>
+</div>
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-lock"></i></div>
+<input type="password" placeholder="Password" name="password" id="password" class="form-control" tabindex="2">
+</div>
+<span id="password-error" class="help-block has-error"></span>
+</div>
+<div class="form-group mb-20 capcha">
+<div class="row">
+<div id="capcha-new-image" class="col-xs-8 no-robot border">
+<img id="capcha-image" src="#" alt="" style="width: 100%;" />
+</div>
+<div class="col-xs-3 no-robot border">
+<a href="#" class="">
+<i id="recaptcha" class="fa fa-refresh fa-4x"></i>
+</a>
+</div>
+<div class="col-xs-12 mt-10">
+<input id="captcha" name="captcha" type="text" class="form-control" tabindex="3">
+</div>
+</div>
+ </div>
+<button type="button" data-loading-text="Signing In...." class="btn red-btn btn-block bt-login" id="login_btn">
+Login
+</button>
+<input type="hidden" name="_csrf_token" value="0qF71DrCd8uYW_qT-VPQDceaHspUICCpYm-RW3V81kc">
+</form>
+</div>
+<div id="email-verification" class="tab-pane" role="tabpanel">
+&nbsp;&nbsp;
+<span style="display: none;" class="response_error" id="registration_fail">Failed, please try again</span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/accounts/sendVerEmail/" method="POST">
+<div class="form-group">
+<div id="verification_form_error" class="col-xs-12 alert-danger bottom10"></div>
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" id="femail" name="ver_code_username" class="form-control">
+</div>
+<span id="femail-error" data-error="0" class="help-block has-error"></span>
+</div>
+<button data-loading-text="Sending...." class="btn red-btn btn-block bt-login" id="send_verification_mail" type="button">
+Send
+</button>
+</form>
+</div>
+<div id="forget_password" class="tab-pane text-center" role="tabpanel">
+&nbsp;&nbsp;
+<span class="col-xs-12 alert-danger bottom10" id="reset_fail"></span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/profile/changePasswordStep1">
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" id="username" name="username" class="form-control">
+</div>
+<span id="username-error" data-error="0" class="help-block has-error"></span>
+</div>
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-at"></i></div>
+<input type="text" name="email" placeholder="Email" id="remail" class="form-control">
+</div>
+<span id="remail-error" data-error="0" class="help-block has-error"></span>
+</div>
+<button data-loading-text="Please wait...." class="btn red-btn btn-block bt-login" id="reset_btn" type="button">
+Forgot Password
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="pull-right">
+<div class="topbar-search dropdown">
+<a href="#" class="dropdown-toggle white" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-lg fa-search"></i></a>
+<ul class="dropdown-menu pull-right">
+<li>
+<form name="" method="get" action="https://www.onelife.eu/en/search" class="input-group" data="js-search-form.html">
+<input type="search" id="search" name="search" required="required" class="form-control" placeholder="Search" />
+<span class="input-group-btn">
+<button class="btn btn-default"><i class="fa fa-search"></i></button>
+</span>
+</form>
+</li>
+</ul>
+</div>
+</div>
+<div class="languge pull-right pt-5">
+<div class="btn-group">
+<button type="button" class="language-dropdown-toggle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<span class="lang-ico pull-left" style="background-image:url('../uploads/media/default/0001/01/thumb_555_default_very_small.png')"></span>
+</button>
+<div class="dropdown-menu dropdown-menu-lang pl-10 pr-10">
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="en" href="news.html">
+<img src="../uploads/media/default/0001/01/9a4b418c8c91f5216ae78864bf0ae59a178862b0.png" width="20" class="mr-5" alt="" />
+English
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="zh" href="https://www.onelife.eu/zh/news">
+<img src="../uploads/media/default/0001/01/c4c40a553977a0364aeb4e3d7ecd20ac40778db1.png" width="20" class="mr-5" alt="" />
+简体中文
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="es" href="https://www.onelife.eu/es/news">
+<img src="../uploads/media/default/0001/01/03a563bc29cdb439d57d6a67762d83555b777848.png" width="20" class="mr-5" alt="" />
+Español
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="pt" href="https://www.onelife.eu/pt/news">
+<img src="../uploads/media/default/0001/01/1538ac2107f7b338495087cb45c8919d47819aa4.png" width="20" class="mr-5" alt="" />
+Português
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="ru" href="https://www.onelife.eu/ru/news">
+<img src="../uploads/media/default/0001/01/68ddeb3c998439c4ef5950b88ac517bd1dd794a0.png" width="20" class="mr-5" alt="" />
+Russian
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="de" href="https://www.onelife.eu/de/news">
+<img src="../uploads/media/default/0001/01/a344e1d1889f05951af0c61f2402e9a6c4f6ce63.png" width="20" class="mr-5" alt="" />
+German
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="ja" href="https://www.onelife.eu/ja/news">
+<img src="../uploads/media/default/0001/01/309ff6dacc9bbd54a0de4ca349fbbf176a7273bc.png" width="20" class="mr-5" alt="" />
+日本語
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-line">
+<div class="container">
+<div class="row">
+<nav class="navbar" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+<a class="navbar-brand navbar-left" href="index.html">
+<img title="" alt="oneLife" src="../bundles/onecoinonelifeopen/images/logoab8e.png?201710241251" itemprop="logo" class="logo">
+</a>
+
+</div>
+<div id="navbar" class="collapse navbar-collapse">
+<ul class="nav navbar-nav  navbar-right">
+<li class="first"> <a href="index.html">
+Home
+</a>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+About
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="about.html">
+Our culture
+</a>
+</li>
+<li class="last"> <a href="faq.html">
+FAQ
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Membership
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="oneacademy.html">
+oneacademy
+</a>
+</li>
+<li> <a href="onecoincloud.html">
+onecoincloud
+</a>
+</li>
+<li> <a href="onetablet.html">
+onetablet
+</a>
+</li>
+<li class="last"> <a href="signup.html">
+Join us
+</a>
+</li>
+</ul>
+</li>
+<li class="active dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Media Center
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="active first"> <a href="news.html">
+News &amp; Press Releases
+</a>
+</li>
+<li> <a href="press-room.html">
+Press Room
+</a>
+</li>
+<li class="last"> <a href="resource-center.html">
+Resources
+</a>
+</li>
+</ul>
+</li>
+<li> <a href="opportunity.html">
+Opportunity
+</a>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Positive impact
+<b class="caret"></b>
+</a>
+ <ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="positive-impact/mission.html">
+Our mission
+</a>
+</li>
+<li class="last"> <a href="positive-impact/projects.html">
+Our projects
+</a>
+</li>
+</ul>
+</li>
+<li> <a href="blog.html">
+Blog
+</a>
+</li>
+<li class="last"> <span>
+<button type="button" id="loginBtn" class="btn red-btn login-btn btn-lg" data-toggle="modal" data-target="#login-modal">LOGIN
+</button>
+</span>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<div class="border-bottom wallpaper-inner" style="background-image: url(../uploads/media/default/0001/01/8cf6e27d9776c7b17ee07b49f73bdecbb5a76550.jpg);">
+<div class="relative">
+<div class="inner-position">
+<h1 class="header-big uppercase font-bebas-bold">
+</h1>
+<div class="text">
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<section class="news-section">
+<div class="container">
+<div class="main-title">
+<h2>Company News</h2>
+<div class="line"></div>
+</div>
+<div class="row news-listing">
+<div id="article-880" class="col-md-3 col-sm-6">
+<article class="well thumbnail">
+<a href="news/onelife-family-hits-impressive-2.html" class="">
+<img alt="2.5 million.png" title="2.5 million.png" src="../uploads/media/default/0001/01/d37e4f7e4cd6b35381e9c62a98bd76a99b250583.png" width="575" height="232" class="img-responsive" />
+</a>
+<div class="status">Company News</div>
+<div class="caption">
+<h3 class="font-bold fs-20 mb-10 color-red uppercase">
+<a href="news/onelife-family-hits-impressive-2.html" class="color-red">ONELIFE FAMILY HITS IMPRESSIVE 2.5 MILLION MARK</a>
+</h3>
+<p class="font-regular">
+The OneLife Network is proud to announce yet another impressive milestone on its path to success. Just hours before one of the...
+</p>
+</div>
+</article>
+</div>
+<div id="article-877" class="col-md-3 col-sm-6">
+<article class="well thumbnail">
+<a href="news/the-onelife-network-presents-two-new-packages%21.html" class="">
+
+<img alt="x_74678_new_p.png" title="x_74678_new_p.png" src="../uploads/media/default/0001/01/5fd28d422c9ff0153e0ad90810e4a4ea42b4f730.png" width="582" height="245" class="img-responsive" />
+</a>
+<div class="status">Company News</div>
+<div class="caption">
+<h3 class="font-bold fs-20 mb-10 color-red uppercase">
+<a href="news/the-onelife-network-presents-two-new-packages%21.html" class="color-red">THE ONELIFE NETWORK PRESENTS TWO NEW PACKAGES!</a>
+</h3>
+<p class="font-regular">
+Following the rapid expansion of the OneLife Network and the establishment of OneCoin as a world-leader in cryptocurrency, we...
+</p>
+</div>
+</article>
+</div>
+<div id="article-876" class="col-md-3 col-sm-6">
+<article class="well thumbnail">
+<a href="news/onecoin-unveils-new-brand-and-3-new-websites.html" class="">
+<img alt="x_70759_3_logos.png" title="x_70759_3_logos.png" src="../uploads/media/default/0001/01/7605120b564f15d572f01e3981454358f52b1180.png" width="1168" height="532" class="img-responsive" />
+</a>
+<div class="status">Company News</div>
+<div class="caption">
+<h3 class="font-bold fs-20 mb-10 color-red uppercase">
+<a href="news/onecoin-unveils-new-brand-and-3-new-websites.html" class="color-red">ONECOIN UNVEILS NEW BRAND AND 3 NEW WEBSITES</a>
+</h3>
+<p class="font-regular">
+One of the world&rsquo;s leading cryptocurrency companies, OneCoin, officially unveiled an entirely new brand &ndash; the OneLife...
+</p>
+</div>
+</article>
+</div>
+<div id="article-875" class="col-md-3 col-sm-6">
+<article class="well thumbnail">
+<a href="news/onecoin-announces-faster-blockchain-and-coin-increase.html" class="">
+<img alt="x_468_blockchain_image.png" title="x_468_blockchain_image.png" src="../uploads/media/default/0001/01/dce803450a4952dc382d94c45ac70923364c690a.png" width="1366" height="768" class="img-responsive" />
+</a>
+<div class="status">Company News</div>
+<div class="caption">
+<h3 class="font-bold fs-20 mb-10 color-red uppercase">
+<a href="news/onecoin-announces-faster-blockchain-and-coin-increase.html" class="color-red">ONECOIN ANNOUNCES FASTER BLOCKCHAIN AND COIN INCREASE</a>
+</h3>
+<p class="font-regular">
+The global leader in cryptocurrency &ndash; OneCoin, is delighted to announce the integration of another reliable partner &ndash;...
+</p>
+</div>
+</article>
+</div>
+<div id="article-874" class="col-md-3 col-sm-6">
+<article class="well thumbnail">
+<a href="news/hackers-steal-72-million-usd-worth-of-bitcoin-from-exchange-in-hong-kong%2c-onecoin-reassures-users.html" class="">
+<img alt="x_59022_shutterstock_169402199.jpg" title="x_59022_shutterstock_169402199.jpg" src="../uploads/media/default/0001/01/c70df3c4e60ae4aebaf7951695eab169f1e9aabf.jpg" width="1000" height="667" class="img-responsive" />
+</a>
+<div class="status">Company News</div>
+<div class="caption">
+<h3 class="font-bold fs-20 mb-10 color-red uppercase">
+<a href="news/hackers-steal-72-million-usd-worth-of-bitcoin-from-exchange-in-hong-kong%2c-onecoin-reassures-users.html" class="color-red">HACKERS STEAL 72 MILLION USD WORTH OF BITCOIN FROM EXCHANGE IN HONG KONG, ONECOIN REASSURES USERS</a>
+</h3>
+<p class="font-regular">
+BitFinex Hack
+Nearly 72 million USD worth of bitcoin (119,756 bitcoins) was stolen from from users&#39; accounts in one of...
+</p>
+</div>
+</article>
+</div>
+<div id="article-873" class="col-md-3 col-sm-6">
+<article class="well thumbnail">
+<a href="news/onelife-youtube-channel-is-back%21.html" class="">
+<img alt="OLN YouTube channel.jpg" title="OLN YouTube channel.jpg" src="../uploads/media/default/0001/01/b65d29d5d3f6486071b29bccac320a057325d0df.jpg" width="1053" height="571" class="img-responsive" />
+</a>
+<div class="status">Company News</div>
+<div class="caption">
+<h3 class="font-bold fs-20 mb-10 color-red uppercase">
+<a href="news/onelife-youtube-channel-is-back%21.html" class="color-red">ONELIFE YOUTUBE CHANNEL IS BACK!</a>
+</h3>
+<p class="font-regular">
+We have some great news this week &ndash; following a short period, during which the OneLife YouTube channel was unavailable,...
+</p>
+</div>
+</article>
+</div>
+<div id="article-872" class="col-md-3 col-sm-6">
+<article class="well thumbnail">
+<a href="news/onecoin-elite-gather-in-london-to-celebrate-dr.html" class="">
+<img alt="18208_birthday_party.jpg" title="18208_birthday_party.jpg" src="../uploads/media/default/0001/01/0c621de32076738d01f297c31bb2e34848f53037.jpg" width="2476" height="1548" class="img-responsive" />
+</a>
+<div class="status">Company News</div>
+<div class="caption">
+<h3 class="font-bold fs-20 mb-10 color-red uppercase">
+<a href="news/onecoin-elite-gather-in-london-to-celebrate-dr.html" class="color-red">ONECOIN ELITE GATHER IN LONDON TO CELEBRATE DR. RUJA IGNATOVA’S BIRTHDAY</a>
+</h3>
+<p class="font-regular">
+Some of the brightest stars in the finance, business, entertainment and fashion industries, as well as a number of personal guests...
+</p>
+</div>
+</article>
+</div>
+<div id="article-871" class="col-md-3 col-sm-6">
+<article class="well thumbnail">
+<a href="news/%e5%b7%b2%e7%bb%8f%e5%ae%a3%e5%b8%83%e4%ba%86coinrush%e6%b4%bb%e5%8a%a8%e7%9a%84%e4%bc%9a%e5%9c%ba%ef%bc%81.html" class="">
+<img alt="36150_cover_onecoin_coinrush.jpg" title="36150_cover_onecoin_coinrush.jpg" src="../uploads/media/default/0001/01/065f68d36d9e19dd9f7e340e488d08cd25f2549a.jpg" width="828" height="315" class="img-responsive" />
+</a>
+<div class="status">Company News</div>
+<div class="caption">
+<h3 class="font-bold fs-20 mb-10 color-red uppercase">
+<a href="news/%e5%b7%b2%e7%bb%8f%e5%ae%a3%e5%b8%83%e4%ba%86coinrush%e6%b4%bb%e5%8a%a8%e7%9a%84%e4%bc%9a%e5%9c%ba%ef%bc%81.html" class="color-red">COINRUSH VENUE ANNOUNCED!</a>
+</h3>
+<p class="font-regular">
+The event that we have all been waiting for is finally here! And we are very proud to finally announce the venue for the CoinRush...
+</p>
+</div>
+</article>
+</div>
+</div>
+<div class="navigation">
+<nav class="text-center bg-color-yellow black">
+<ul class="pager">
+<li class="page-item previous ">
+<a class="page-link" href="news8bb0.html?category=1&amp;page=1" aria-label="Previous">
+<span aria-hidden="true">&#10094;&#10094;</span>
+</a>
+</li>
+<li class="page-item previous ">
+<a class="page-link" href="news8bb0.html?category=1&amp;page=1" aria-label="Previous">
+<span aria-hidden="true">&#10094;</span>
+</a>
+</li>
+<li class="page-item">
+<a class="page-link" href="news8bb0.html?category=1&amp;page=1">1</a>
+</li>
+<li class="page-item">
+<a class="page-link active" href="newsf751.html?category=1&amp;page=2">2</a>
+</li>
+<li class="page-item">
+<a class="page-link" href="news9dc0.html?category=1&amp;page=3">3</a>
+</li>
+ <li class="page-item">
+<a class="page-link" href="news2ea3.html?category=1&amp;page=4">4</a>
+</li>
+<li class="page-item">
+<a class="page-link" href="newscc93.html?category=1&amp;page=5">5</a>
+</li>
+<li class="page-item">
+<a class="page-link" href="newsea5d.html?category=1&amp;page=6">6</a>
+</li>
+<li class="page-item next">
+<a lass="page-link" href="news0c0d.html?category=1&amp;page=11" aria-label="Last">
+<span aria-hidden="true">❯❯</span>
+</a>
+</li>
+<li class="page-item next">
+<a lass="page-link" href="news9dc0.html?category=1&amp;page=3" aria-label="Next">
+<span aria-hidden="true">❯</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+<footer class="main-footer clearfix" itemtype="http://schema.org/WPFooter" itemscope="">
+<section class="link-section">
+<div class="container">
+<div class="row footer-navi-holder">
+<div class="col-xs-2 col-xs-offset-1 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">Site map</h3>
+<ul>
+<li><a href="index.html"><i class="fa fa-angle-right"></i>&nbsp;Home
+</a></li>
+<li><a href="about.html"><i class="fa fa-angle-right"></i>&nbsp;About</a></li>
+<li><a href="https://www.onelife.eu/user/signup"><i class="fa fa-angle-right"></i>&nbsp;Membership</a></li>
+<li><a href="opportunity.html"><i class="fa fa-angle-right"></i>&nbsp;Opportunity</a></li>
+<li><a href="positive-impact/mission.html"><i class="fa fa-angle-right"></i>&nbsp;Positive Impact</a>
+</li>
+<li><a href="blog.html"><i class="fa fa-angle-right"></i>&nbsp;Blog</a>
+</li>
+<li id="backoffice-login">
+<a href="javascript:void(0);">
+<i class="fa fa-angle-right"></i>&nbsp;Backoffice
+</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">&nbsp;AFFILIATED SITES</h3>
+<ul>
+<li class="first"> <a href="http://oneworldfoundation.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneWorld Foundation</a>
+</li>
+<li> <a href="https://www.oneacademy.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneAcademy</a>
+</li>
+<li> <a href="https://onecoin.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneCoin</a>
+</li>
+<li class="last"> <a href="https://www.onelifeevents.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneLife events</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">&nbsp;Media Center</h3>
+<ul>
+<li class="first"> <a href="news.html"> <i class="fa fa-angle-right"></i>&nbsp;News</a>
+</li>
+<li>  <a href="press-room.html"> <i class="fa fa-angle-right"></i>&nbsp;Press Room</a>
+</li>
+<li class="last"> <a href="resource-center.html"> <i class="fa fa-angle-right"></i>&nbsp;Resources</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">legal</h3>
+<ul>
+<li class="first"> <a href="ima-agreement.html"> <i class="fa fa-angle-right"></i>&nbsp;IMA Agreement</a>
+</li>
+<li> <a href="http://onelife.eu/en/terms-and-conditions"> <i class="fa fa-angle-right"></i>&nbsp;T&amp;C</a>
+</li>
+<li> <a href="http://onelife.eu/en/global-compensation-plan"> <i class="fa fa-angle-right"></i>&nbsp;Global Comp. Plan</a>
+</li>
+<li class="last"> <a href="aml-policy.html"> <i class="fa fa-angle-right"></i>&nbsp;AML Policy</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">Help</h3>
+<ul>
+<li class="first"> <a href="http://support.onecoin.eu/User/Login"> <i class="fa fa-angle-right"></i>&nbsp;Support</a>
+</li>
+<li> <a href="http://onelife.eu/en/contacts"> <i class="fa fa-angle-right"></i>&nbsp;Contact Us</a>
+</li>
+<li class="last"> <a href="faq.html"> <i class="fa fa-angle-right"></i>&nbsp;FAQ</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-9 mb-30 bg-phone">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">download the onelife network app:</h3>
+<div class="row">
+<div class="col-sm-7">
+<div class="row">
+<div class="col-sm-4 col-xs-4 relative">
+<div class="">
+<a href="https://static.onelife.eu/OneLife-0.2.apk" target="_blank" class=""><img src="../bundles/onecoinonelifeopen/images/qr-onelifeab8e.jpg?201710241251" alt="android qrcode" class="qrcode-img" /></a>
+</div>
+</div>
+<div class="col-sm-8 col-xs-8">
+<div class="clearfix mb-15">
+<a target="_blank" href="https://play.google.com/store/apps/details?id=com.onelife.backend" class="pull-left mb-5 mr-5"><img src="../bundles/onecoinonelifeopen/images/google-playab8e.png?201710241251" alt="google play" /></a>
+<a target="_blank" href="https://itunes.apple.com/app/onelife-mobile/id1124062828" class="pull-left mb-5 "><img src="../bundles/onecoinonelifeopen/images/app-storeab8e.png?201710241251" alt="app store" /></a>
+</div>
+&lt; Direct download for Android
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">Social media:</h3>
+<div class="mb-10 social-links relative">
+<a href="https://www.facebook.com/One-Life-Network-1087166041305845/?fref=ts" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/b3448a74e5d87e16f637f69dc019d6679d32592b.png" alt="facebook" />
+</a>
+<a href="https://twitter.com/OneLife_Network" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/4b1b3ee93f72e40dcd46cd5ead7aced974071d20.png" alt="twitter" />
+</a>
+<a href="https://www.instagram.com/onelifenetworkofficial/" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/2d9f901f43465d23ae5646e65951e9ccef2be6b2.png" alt="instagram" />
+</a>
+<a href="https://www.youtube.com/channel/UC8fIpkNowRTSxwbOsYF1Wuw" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/b8a7ad1b67417aec7c5d5b9a21606a6911207689.png" alt="youtube" />
+</a>
+<a href="#" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/16a6892db9439f3a3817636397a1a98164621fc1.png" alt="" />
+</a>
+<a href="#" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/56632ebbd123485dcd328464d1f6b58e1815eb1c.png" alt="" />
+</a>
+<a href="javascript:void(0)" target="_blank" class="wechat-link">
+<img src="../uploads/media/default/0001/01/thumb_553_default_very_small.png" alt="WeChat" />
+</a>
+<img src="../uploads/media/default/0001/01/thumb_571_default_big.png" alt="" class="wechat-qr" />
+<a href="http://i.youku.com/i/UMzgxMzQ2NTc2OA==" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/33c605ff8abb8effc1d8e1f88201360c566a06ff.png" alt="youku" />
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="text-center mt-35 mb-35 bottom">
+<a href="index.html" class="block mb-20">
+<img src="../bundles/onecoinonelifeopen/images/logo-footerab8e.png?201710241251" alt="" class="logo-footer" width="300" />
+</a>
+<p>© onelife.eu</p>
+<p class="mt-15 fs-12">
+<em>
+ONELIFE NETWORK LTD, 2118 Guava Street, Belama Phase I, Belize City, Belize<br />
+</em>
+</p>
+</div>
+</footer>
+<script>
+                    (function (i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r;
+                        i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                        a = s.createElement(o),
+                                m = s.getElementsByTagName(o)[0];
+                        a.async = 1;
+                        a.src = g;
+                        m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
+
+                    ga('create', 'UA-54134897-2', 'auto');
+                    ga('send', 'pageview');
+
+                </script>
+</div>
+</body>
+
+<!-- Mirrored from www.onelife.eu/en/news?category=1&page=2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2017 07:13:31 GMT -->
+</html>

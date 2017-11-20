@@ -1,0 +1,8 @@
+.left_sidebar{
+    width: 25%;
+    float: left;
+}
+.page_content{
+   float: left;
+   width: 75%;
+}

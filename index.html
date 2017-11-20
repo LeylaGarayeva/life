@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Organization">
+
+<!-- Mirrored from www.onelife.eu/en/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2017 07:06:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="keywords" content="" />
+<meta property="og:description" content="OneLife Description" /> <meta itemprop="description" content="OneLife Description"> <meta name="twitter:description" content="OneLife Description" />
+<meta property="og:image" content="bundles/onecoinonelifeopen/images/logo.png" /> <meta property="og:image:width" content="300px" /> <meta property="og:image:height" content="200px" /> <meta itemprop="image" content="bundles/onecoinonelifeopen/images/logo.png" /> <meta name="twitter:image" content="bundles/onecoinonelifeopen/images/logo.png" />
+<meta property="og:title" content="Home Page | OneLife" /> <meta itemprop="name" content="Home Page | OneLife" /> <meta name="twitter:title" content="Home Page | OneLife" /> <title>Home Page | OneLife</title>
+<link rel="icon" href="https://www.onelife.eu/favicon.ico?201710241251" type="image/x-icon" />
+<link rel="stylesheet" href="assets/css/compiledab8e.css?201710241251" />
+<script src="assets/js/compiledab8e.js?201710241251"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body itemtype="http://schema.org/WebPage" itemscope="">
+<div class="site-size">
+<header class="main-header" itemtype="http://schema.org/WPHeader" itemscope="">
+<div class="top-line">
+<div class="container">
+
+<div class="modal fade" id="login-modal" role="dialog">
+<div class="modal-dialog">
+
+<div class="modal-content">
+<div class="modal-header login-modal-header">
+<button type="button" class="close" data-dismiss="modal">X</button>
+<h4 id="loginModalLabel" class="modal-title text-center">User authentication</h4>
+</div>
+<div class="modal-body">
+<div class="login-tab" role="tabpanel">
+
+<ul role="tablist" class="nav nav-tabs">
+<li class="active" role="presentation">
+<a data-toggle="tab" role="tab" aria-controls="signin" href="#signin" id="signin-taba" aria-expanded="true">
+Sign in
+</a>
+</li>
+<li role="presentation" class="">
+<a data-toggle="tab" role="tab" aria-controls="email-verification" href="#email-verification" id="email-verification-taba" aria-expanded="false">
+Send an email verification
+</a>
+</li>
+<li role="presentation" class="">
+<a data-toggle="tab" role="tab" aria-controls="forget_password" href="#forget_password" id="forgetpass-taba" aria-expanded="false">
+Forgot Password
+</a>
+</li>
+</ul>
+
+<div class="tab-content">
+<div id="signin" class="tab-pane text-center active" role="tabpanel">
+&nbsp;&nbsp;
+<span style="display: none;" class="response_error" id="login_fail">Login failed, please try again</span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/accounts/login/" method="POST" data-captcha="/captcha" data-recaptcha="/captcha?token=">
+<div class="form-group">
+<span id="login-error" class="col-xs-12 alert-danger help-block has-error color-red bold"></span>
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" name="username_login" id="login_username" class="form-control" tabindex="1">
+</div>
+<span id="login-username-error" class="help-block has-error"></span>
+</div>
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-lock"></i></div>
+<input type="password" placeholder="Password" name="password" id="password" class="form-control" tabindex="2">
+</div>
+<span id="password-error" class="help-block has-error"></span>
+</div>
+<div class="form-group mb-20 capcha">
+<div class="row">
+<div id="capcha-new-image" class="col-xs-8 no-robot border">
+<img id="capcha-image" src="#" alt="" style="width: 100%;" />
+</div>
+<div class="col-xs-3 no-robot border">
+<a href="#" class="">
+<i id="recaptcha" class="fa fa-refresh fa-4x"></i>
+</a>
+</div>
+<div class="col-xs-12 mt-10">
+<input id="captcha" name="captcha" type="text" class="form-control" tabindex="3">
+</div>
+</div>
+ </div>
+<button type="button" data-loading-text="Signing In...." class="btn red-btn btn-block bt-login" id="login_btn">
+Login
+</button>
+<input type="hidden" name="_csrf_token" value="purOpHVoFVZb-7TYdKeqStDKikbVsFqX9ev8zJZOR3Y">
+</form>
+</div>
+<div id="email-verification" class="tab-pane" role="tabpanel">
+&nbsp;&nbsp;
+<span style="display: none;" class="response_error" id="registration_fail">Failed, please try again</span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/accounts/sendVerEmail/" method="POST">
+<div class="form-group">
+<div id="verification_form_error" class="col-xs-12 alert-danger bottom10"></div>
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" id="femail" name="ver_code_username" class="form-control">
+</div>
+<span id="femail-error" data-error="0" class="help-block has-error"></span>
+</div>
+<button data-loading-text="Sending...." class="btn red-btn btn-block bt-login" id="send_verification_mail" type="button">
+Send
+</button>
+</form>
+</div>
+<div id="forget_password" class="tab-pane text-center" role="tabpanel">
+&nbsp;&nbsp;
+<span class="col-xs-12 alert-danger bottom10" id="reset_fail"></span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/profile/changePasswordStep1">
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" id="username" name="username" class="form-control">
+</div>
+<span id="username-error" data-error="0" class="help-block has-error"></span>
+</div>
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-at"></i></div>
+ <input type="text" name="email" placeholder="Email" id="remail" class="form-control">
+</div>
+<span id="remail-error" data-error="0" class="help-block has-error"></span>
+</div>
+<button data-loading-text="Please wait...." class="btn red-btn btn-block bt-login" id="reset_btn" type="button">
+Forgot Password
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="pull-right">
+<div class="topbar-search dropdown">
+<a href="#" class="dropdown-toggle white" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-lg fa-search"></i></a>
+<ul class="dropdown-menu pull-right">
+<li>
+<form name="" method="get" action="https://www.onelife.eu/en/search" class="input-group" data="js-search-form.html">
+<input type="search" id="search" name="search" required="required" class="form-control" placeholder="Search" />
+<span class="input-group-btn">
+<button class="btn btn-default"><i class="fa fa-search"></i></button>
+</span>
+</form>
+</li>
+</ul>
+</div>
+</div>
+<div class="languge pull-right pt-5">
+<div class="btn-group">
+<button type="button" class="language-dropdown-toggle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<span class="lang-ico pull-left" style="background-image:url('uploads/media/default/0001/01/thumb_555_default_very_small.png')"></span>
+</button>
+<div class="dropdown-menu dropdown-menu-lang pl-10 pr-10">
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="en" href="index.html">
+<img src="uploads/media/default/0001/01/9a4b418c8c91f5216ae78864bf0ae59a178862b0.png" width="20" class="mr-5" alt="" />
+English
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="zh" href="https://www.onelife.eu/zh/">
+<img src="uploads/media/default/0001/01/c4c40a553977a0364aeb4e3d7ecd20ac40778db1.png" width="20" class="mr-5" alt="" />
+简体中文
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="es" href="https://www.onelife.eu/es/">
+<img src="uploads/media/default/0001/01/03a563bc29cdb439d57d6a67762d83555b777848.png" width="20" class="mr-5" alt="" />
+Español
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="pt" href="https://www.onelife.eu/pt/">
+<img src="uploads/media/default/0001/01/1538ac2107f7b338495087cb45c8919d47819aa4.png" width="20" class="mr-5" alt="" />
+Português
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="ru" href="https://www.onelife.eu/ru/">
+<img src="uploads/media/default/0001/01/68ddeb3c998439c4ef5950b88ac517bd1dd794a0.png" width="20" class="mr-5" alt="" />
+Russian
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="de" href="https://www.onelife.eu/de/">
+<img src="uploads/media/default/0001/01/a344e1d1889f05951af0c61f2402e9a6c4f6ce63.png" width="20" class="mr-5" alt="" />
+German
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="ja" href="https://www.onelife.eu/ja/">
+<img src="uploads/media/default/0001/01/309ff6dacc9bbd54a0de4ca349fbbf176a7273bc.png" width="20" class="mr-5" alt="" />
+日本語
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-line">
+<div class="container">
+<div class="row">
+<nav class="navbar" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+<a class="navbar-brand navbar-left" href="index.html">
+<img title="" alt="oneLife" src="bundles/onecoinonelifeopen/images/logoab8e.png?201710241251" itemprop="logo" class="logo">
+</a>
+
+</div>
+<div id="navbar" class="collapse navbar-collapse">
+<ul class="nav navbar-nav  navbar-right">
+<li class="active first"> <a href="index.html">
+Home
+</a>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+About
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="about.html">
+Our culture
+</a>
+</li>
+<li class="last"> <a href="faq.html">
+FAQ
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Membership
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="oneacademy.html">
+oneacademy
+</a>
+</li>
+<li> <a href="onecoincloud.html">
+onecoincloud
+</a>
+</li>
+<li> <a href="onetablet.html">
+onetablet
+</a>
+</li>
+<li class="last"> <a href="signup.html">
+Join us
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Media Center
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="news.html">
+News &amp; Press Releases
+</a>
+</li>
+<li> <a href="press-room.html">
+Press Room
+</a>
+</li>
+<li class="last"> <a href="resource-center.html">
+Resources
+</a>
+</li>
+</ul>
+</li>
+<li> <a href="opportunity.html">
+Opportunity
+</a>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Positive impact
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="positive-impact/mission.html">
+Our mission
+</a>
+</li>
+<li class="last"> <a href="positive-impact/projects.html">
+Our projects
+</a>
+</li>
+</ul>
+</li>
+<li> <a href="blog.html">
+Blog
+</a>
+</li>
+<li class="last"> <span>
+<button type="button" id="loginBtn" class="btn red-btn login-btn btn-lg" data-toggle="modal" data-target="#login-modal">LOGIN
+</button>
+</span>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<div id="home-carousel" class="carousel slide border-bottom" data-ride="carousel">
+<div class="carousel-inner">
+<div class="item active">
+<div class="fill-slider" style="background-image:url('uploads/media/default/0001/01/2bbbb317d682ed98f7e182fe675dd91812055d47.jpg');"></div>
+
+<div class="carousel-caption">
+<div class="slider-title"><p>Embrace Change</p>
+<p>Drive Progress</p></div>
+<div><p>You are among the next generation of leaders</p></div>
+</div>
+</div>
+<div class="item ">
+<div class="fill-slider" style="background-image:url('uploads/media/default/0001/01/87d4aba2f72debfd928001ce69cf6093f2780669.jpg');"></div>
+
+<div class="carousel-caption">
+<div class="slider-title"><p>Learn today.</p>
+<p>Lead tomorrow</p></div>
+<div><p>Advance your financial management skills</p>
+<p>with our educational e-platform</p></div>
+</div>
+</div>
+<div class="item ">
+<div class="fill-slider" style="background-image:url('uploads/media/default/0001/01/8f98938cb3dc9f91ef69c8ff0ea6a5c5fd597413.jpg');"></div>
+
+<div class="carousel-caption">
+<div class="slider-title"><p>Think and</p>
+<p>Act Globally</p></div>
+<div><p>Join us in creating opportunities</p>
+<p>for the less fortunate</p></div>
+</div>
+</div>
+<div class="item ">
+<div class="fill-slider" style="background-image:url('uploads/media/default/0001/01/4bf14183c82ae17d08065b3dddbd7f3286c810cb.jpg');"></div>
+
+<div class="carousel-caption">
+<div class="slider-title"><p>Empower</p>
+<p>Your Future&nbsp;</p></div>
+<div><p>Reach your true potential</p>
+<p>and create a better tomorrow</p></div>
+</div>
+</div>
+<a class="left carousel-control" href="#home-carousel" data-slide="prev">
+<img src="bundles/onecoinonelifeopen/images/leftab8e.png?201710241251" alt="" />
+</a>
+<a class="right carousel-control" href="#home-carousel" data-slide="next">
+<img src="bundles/onecoinonelifeopen/images/rightab8e.png?201710241251" alt="" />
+</a>
+</div>
+<a class="left carousel-control" href="#home-carousel" data-slide="prev">
+<img src="bundles/onecoinonelifeopen/images/leftab8e.png?201710241251" alt="" />
+</a>
+<a class="right carousel-control" href="#home-carousel" data-slide="next">
+<img src="bundles/onecoinonelifeopen/images/rightab8e.png?201710241251" alt="" />
+</a>
+</div>
+<main>
+<div class="container">
+<section class="couter-section text-center">
+<div class="row">
+<div class="col-sm-12">
+<div class="joined-holder clearfix">
+<h3 class="text-center font-bold fs-30 uppercase title">OneLife Members
+:</h3>
+<div class="joined-counter head-count color-red mb-35" data-value="3284584"></div>
+</div>
+</div>
+
+<section class="bgr-section text-center short">
+<div class="inner-bgr" style="background-image: url(../uploads/media/default/0001/01/d01ab156147d93df91b67b6e3f4e1c0e4dd734c9.jpg);">
+BUILD LONG-LASTING RELATIONSHIPS
+</div>
+</section>
+<section class="packages-section text-center">
+<div class="container">
+<div class="row">
+<div class="main-title">
+<h2>Our Products</h2>
+<span class="font-regular fs-25">Explore opportunities</span>
+<div class="line"></div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="well thumbnail">
+<a href="oneacademy.html#package-1" class=""><img src="uploads/media/default/0001/01/thumb_18_default_medium.png" alt="" class="img-responsive" /></a>
+ <div class="caption">
+<h3 class="font-bold uppercase">
+ROOKIE PACKAGE
+<br />
+<span class="color-red">
+Free
+</span>
+</h3>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="well thumbnail">
+<a href="oneacademy.html#package-2" class=""><img src="uploads/media/default/0001/01/thumb_19_default_medium.png" alt="" class="img-responsive" /></a>
+<div class="caption">
+<h3 class="font-bold uppercase">
+STARTER PACKAGE
+<br />
+<span class="color-red">
+110 €
+</span>
+</h3>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="well thumbnail">
+<a href="oneacademy.html#package-3" class=""><img src="uploads/media/default/0001/01/thumb_20_default_medium.png" alt="" class="img-responsive" /></a>
+<div class="caption">
+<h3 class="font-bold uppercase">
+TRADER PACKAGE
+<br />
+<span class="color-red">
+550 €
+</span>
+</h3>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="well thumbnail">
+<a href="oneacademy.html#package-4" class=""><img src="uploads/media/default/0001/01/thumb_21_default_medium.png" alt="" class="img-responsive" /></a>
+<div class="caption">
+<h3 class="font-bold uppercase">
+PRO TRADER PACKAGE
+<br />
+<span class="color-red">
+1 100 €
+</span>
+</h3>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="well thumbnail">
+<a href="oneacademy.html#package-5" class=""><img src="uploads/media/default/0001/01/thumb_23_default_medium.png" alt="" class="img-responsive" /></a>
+<div class="caption">
+<h3 class="font-bold uppercase">
+TYCOON TRADER PACKAGE
+<br />
+<span class="color-red">
+5 500 €
+</span>
+</h3>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="well thumbnail">
+<a href="oneacademy.html#package-6" class=""><img src="uploads/media/default/0001/01/thumb_24_default_medium.png" alt="" class="img-responsive" /></a>
+<div class="caption">
+<h3 class="font-bold uppercase">
+PREMIUM TRADER PACKAGE
+<br />
+<span class="color-red">
+13 750 €
+</span>
+</h3>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<div class="well thumbnail">
+<a href="oneacademy.html#package-7" class=""><img src="uploads/media/default/0001/01/thumb_907_default_medium.png" alt="" class="img-responsive" /></a>
+<div class="caption">
+<h3 class="font-bold uppercase">
+INITIAL LAUNCH PACK
+<br />
+<span class="color-red">
+55 555 €
+</span>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="news-section">
+<div class="container">
+<div class="main-title">
+<h2>LATEST NEWS</h2>
+<div class="line"></div>
+</div>
+<div class="row news-listing">
+<div id="article-902" class="col-md-3 col-sm-6">
+<article class="well thumbnail">
+<a href="news/news-flash.html" class="fix-thumb-img">
+<img alt="People&#039;s Bank of China bans ICO.jpg" title="People&#039;s Bank of China bans ICO.jpg" src="uploads/media/default/0001/01/thumb_887_default_big.jpg" width="350" height="216" class="img-responsive" />
+</a>
+<div class="status">Company News</div>
+<div class="caption">
+<h3 class="font-bold fs-20 mb-10 color-red uppercase">
+<a href="news/news-flash.html" class="color-red">News Flash</a>
+</h3>
+<p class="font-regular">
+On September 04, 2017 People&#39;s Bank of China issued a statement announcing, that all types of Initial Coin Offerings should...
+</p>
+</div>
+</article>
+</div>
+<div id="article-898" class="col-md-3 col-sm-6">
+<article class="well thumbnail">
+<a href="news/official-company-statement-regarding-a-press-release-of-the-italian-antitrust-commission--dated-august-10--2017.html" class="fix-thumb-img">
+<img alt="^4A5F0A729929F3880D0683C9D8688522389F5834AFB6CEC744^pimgpsh_fullsize_distr.png" title="^4A5F0A729929F3880D0683C9D8688522389F5834AFB6CEC744^pimgpsh_fullsize_distr.png" src="uploads/media/default/0001/01/thumb_881_default_big.png" width="348" height="144" class="img-responsive" />
+</a>
+<div class="status">Press Releases</div>
+<div class="caption">
+<h3 class="font-bold fs-20 mb-10 color-red uppercase">
+<a href="news/official-company-statement-regarding-a-press-release-of-the-italian-antitrust-commission--dated-august-10--2017.html" class="color-red">OFFICIAL COMPANY STATEMENT REGARDING A PRESS RELEASE OF THE ITALIAN ANTITRUST COMMISSION, DATED AUGUST 10, 2017</a>
+</h3>
+<p class="font-regular">
+&nbsp;
+With regards to the press release of the Italian Antitrust Commission that was published on August 10, 2017, OneCoin...
+</p>
+</div>
+</article>
+</div>
+<div id="article-895" class="col-md-3 col-sm-6">
+<article class="well thumbnail">
+<a href="news/this-is-a-memorable-day-for-the-onelife-network-.html" class="fix-thumb-img">
+<img alt="^B9B592539765C898E05F6051E8F10DDC8ACE5589171D96B4E0^pimgpsh_fullsize_distr.jpg" title="^B9B592539765C898E05F6051E8F10DDC8ACE5589171D96B4E0^pimgpsh_fullsize_distr.jpg" src="uploads/media/default/0001/01/thumb_856_default_big.jpg" width="349" height="435" class="img-responsive" />
+</a>
+<div class="status">Company News</div>
+<div class="caption">
+<h3 class="font-bold fs-20 mb-10 color-red uppercase">
+<a href="news/this-is-a-memorable-day-for-the-onelife-network-.html" class="color-red">This is a memorable day for the OneLife Network!</a>
+</h3>
+<p class="font-regular">
+&nbsp;
+&nbsp;Today we celebrate the amazing Leadership of the OneLife Network! The entire OneLife team cannot be happier to...
+</p>
+ </div>
+</article>
+</div>
+<div id="article-894" class="col-md-3 col-sm-6">
+<article class="well thumbnail">
+<a href="news/new-leadership-and-the-next-big-step-.html" class="fix-thumb-img">
+<img alt="^432E09ACD297C499FEC7CA8A61682403E995B5451EAACD91A2^pimgpsh_fullsize_distr.png" title="^432E09ACD297C499FEC7CA8A61682403E995B5451EAACD91A2^pimgpsh_fullsize_distr.png" src="uploads/media/default/0001/01/thumb_855_default_big.png" width="350" height="466" class="img-responsive" />
+</a>
+<div class="status">Company News</div>
+<div class="caption">
+<h3 class="font-bold fs-20 mb-10 color-red uppercase">
+<a href="news/new-leadership-and-the-next-big-step-.html" class="color-red">New Leadership and The Next Big Step!</a>
+</h3>
+<p class="font-regular">
+&nbsp;
+Christian, Aron, Stephan Steinkeller and Staffan Liback (or the Four brothers as we know them) have successfully managed...
+</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section id="outer-wrap" class="bgr-video-section">
+<div id="video-wrap">
+<video id="my-video" preload="metadata" autoplay="autoplay" loop="loop" poster="bundles/onecoinonelifeopen/images/video/imgab8e.jpg?201710241251">
+<source src="https://video.onelife.eu/bundles/onecoinonelifeopen/images/video/Opportunity_New_1.mp4" type="video/mp4">
+</video>
+<a href="opportunity.html" class="">A POWERFUL OPPORTUNITY</a>
+</div>
+</section>
+
+</main>
+<footer class="main-footer clearfix" itemtype="http://schema.org/WPFooter" itemscope="">
+<div class="text-center mt-35 mb-35 bottom">
+<a href="index.html" class="block mb-20">
+<img src="bundles/onecoinonelifeopen/images/logo-footerab8e.png?201710241251" alt="" class="logo-footer" width="300" />
+</a>
+<p>© onelife.eu</p>
+<p class="mt-15 fs-12">
+<em>
+ONELIFE NETWORK LTD, 2118 Guava Street, Belama Phase I, Belize City, Belize<br />
+</em>
+</p>
+</div>
+</footer>
+<script>
+                    (function (i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r;
+                        i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                        a = s.createElement(o),
+                                m = s.getElementsByTagName(o)[0];
+                        a.async = 1;
+                        a.src = g;
+                        m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
+
+                    ga('create', 'UA-54134897-2', 'auto');
+                    ga('send', 'pageview');
+
+                </script>
+</div>
+</body>
+</html>

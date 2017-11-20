@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Organization">
+
+<!-- Mirrored from www.onelife.eu/en/press-room by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2017 07:08:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="keywords" content="" />
+<meta property="og:description" content="OneLife Description" /> <meta itemprop="description" content="OneLife Description"> <meta name="twitter:description" content="OneLife Description" />
+<meta property="og:image" content="../bundles/onecoinonelifeopen/images/logo.png" /> <meta property="og:image:width" content="300px" /> <meta property="og:image:height" content="200px" /> <meta itemprop="image" content="../bundles/onecoinonelifeopen/images/logo.png" /> <meta name="twitter:image" content="../bundles/onecoinonelifeopen/images/logo.png" />
+<meta property="og:title" content="Press Center | OneLife" /> <meta itemprop="name" content="Press Center | OneLife" /> <meta name="twitter:title" content="Press Center | OneLife" /> <title>Press Center | OneLife</title>
+<link rel="icon" href="https://www.onelife.eu/favicon.ico?201710241251" type="image/x-icon" />
+<link rel="stylesheet" href="../assets/css/compiledab8e.css?201710241251" />
+<script src="../assets/js/compiledab8e.js?201710241251"></script>
+</head>
+<body itemtype="http://schema.org/WebPage" itemscope="">
+<div class="site-size">
+<header class="main-header" itemtype="http://schema.org/WPHeader" itemscope="">
+<div class="top-line">
+<div class="container">
+
+<div class="modal fade" id="login-modal" role="dialog">
+<div class="modal-dialog">
+
+<div class="modal-content">
+<div class="modal-header login-modal-header">
+<button type="button" class="close" data-dismiss="modal">X</button>
+<h4 id="loginModalLabel" class="modal-title text-center">User authentication</h4>
+</div>
+<div class="modal-body">
+<div class="login-tab" role="tabpanel">
+
+<ul role="tablist" class="nav nav-tabs">
+<li class="active" role="presentation">
+<a data-toggle="tab" role="tab" aria-controls="signin" href="#signin" id="signin-taba" aria-expanded="true">
+Sign in
+</a>
+</li>
+<li role="presentation" class="">
+<a data-toggle="tab" role="tab" aria-controls="email-verification" href="#email-verification" id="email-verification-taba" aria-expanded="false">
+Send an email verification
+</a>
+</li>
+<li role="presentation" class="">
+<a data-toggle="tab" role="tab" aria-controls="forget_password" href="#forget_password" id="forgetpass-taba" aria-expanded="false">
+Forgot Password
+</a>
+</li>
+</ul>
+
+<div class="tab-content">
+<div id="signin" class="tab-pane text-center active" role="tabpanel">
+&nbsp;&nbsp;
+<span style="display: none;" class="response_error" id="login_fail">Login failed, please try again</span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/accounts/login/" method="POST" data-captcha="/captcha" data-recaptcha="/captcha?token=">
+<div class="form-group">
+<span id="login-error" class="col-xs-12 alert-danger help-block has-error color-red bold"></span>
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" name="username_login" id="login_username" class="form-control" tabindex="1">
+</div>
+<span id="login-username-error" class="help-block has-error"></span>
+</div>
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-lock"></i></div>
+<input type="password" placeholder="Password" name="password" id="password" class="form-control" tabindex="2">
+</div>
+<span id="password-error" class="help-block has-error"></span>
+</div>
+<div class="form-group mb-20 capcha">
+<div class="row">
+<div id="capcha-new-image" class="col-xs-8 no-robot border">
+<img id="capcha-image" src="#" alt="" style="width: 100%;" />
+</div>
+<div class="col-xs-3 no-robot border">
+<a href="#" class="">
+<i id="recaptcha" class="fa fa-refresh fa-4x"></i>
+</a>
+</div>
+<div class="col-xs-12 mt-10">
+<input id="captcha" name="captcha" type="text" class="form-control" tabindex="3">
+</div>
+ </div>
+</div>
+<button type="button" data-loading-text="Signing In...." class="btn red-btn btn-block bt-login" id="login_btn">
+Login
+</button>
+<input type="hidden" name="_csrf_token" value="0qF71DrCd8uYW_qT-VPQDceaHspUICCpYm-RW3V81kc">
+</form>
+</div>
+<div id="email-verification" class="tab-pane" role="tabpanel">
+&nbsp;&nbsp;
+<span style="display: none;" class="response_error" id="registration_fail">Failed, please try again</span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/accounts/sendVerEmail/" method="POST">
+<div class="form-group">
+<div id="verification_form_error" class="col-xs-12 alert-danger bottom10"></div>
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" id="femail" name="ver_code_username" class="form-control">
+</div>
+<span id="femail-error" data-error="0" class="help-block has-error"></span>
+</div>
+<button data-loading-text="Sending...." class="btn red-btn btn-block bt-login" id="send_verification_mail" type="button">
+Send
+</button>
+</form>
+</div>
+<div id="forget_password" class="tab-pane text-center" role="tabpanel">
+&nbsp;&nbsp;
+<span class="col-xs-12 alert-danger bottom10" id="reset_fail"></span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/profile/changePasswordStep1">
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" id="username" name="username" class="form-control">
+</div>
+<span id="username-error" data-error="0" class="help-block has-error"></span>
+</div>
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-at"></i></div>
+ <input type="text" name="email" placeholder="Email" id="remail" class="form-control">
+</div>
+<span id="remail-error" data-error="0" class="help-block has-error"></span>
+</div>
+<button data-loading-text="Please wait...." class="btn red-btn btn-block bt-login" id="reset_btn" type="button">
+Forgot Password
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="pull-right">
+<div class="topbar-search dropdown">
+<a href="#" class="dropdown-toggle white" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-lg fa-search"></i></a>
+<ul class="dropdown-menu pull-right">
+<li>
+<form name="" method="get" action="https://www.onelife.eu/en/search" class="input-group" data="js-search-form.html">
+<input type="search" id="search" name="search" required="required" class="form-control" placeholder="Search" />
+<span class="input-group-btn">
+<button class="btn btn-default"><i class="fa fa-search"></i></button>
+</span>
+</form>
+</li>
+</ul>
+</div>
+</div>
+<div class="languge pull-right pt-5">
+<div class="btn-group">
+<button type="button" class="language-dropdown-toggle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<span class="lang-ico pull-left" style="background-image:url('../uploads/media/default/0001/01/thumb_555_default_very_small.png')"></span>
+</button>
+<div class="dropdown-menu dropdown-menu-lang pl-10 pr-10">
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="en" href="press-room.html">
+<img src="../uploads/media/default/0001/01/9a4b418c8c91f5216ae78864bf0ae59a178862b0.png" width="20" class="mr-5" alt="" />
+English
+</a>
+ <a class="dropdown-item block mb-5" rel="alternate" hreflang="zh" href="https://www.onelife.eu/zh/press-room">
+<img src="../uploads/media/default/0001/01/c4c40a553977a0364aeb4e3d7ecd20ac40778db1.png" width="20" class="mr-5" alt="" />
+简体中文
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="es" href="https://www.onelife.eu/es/press-room">
+<img src="../uploads/media/default/0001/01/03a563bc29cdb439d57d6a67762d83555b777848.png" width="20" class="mr-5" alt="" />
+Español
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="pt" href="https://www.onelife.eu/pt/press-room">
+<img src="../uploads/media/default/0001/01/1538ac2107f7b338495087cb45c8919d47819aa4.png" width="20" class="mr-5" alt="" />
+Português
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="ru" href="https://www.onelife.eu/ru/press-room">
+<img src="../uploads/media/default/0001/01/68ddeb3c998439c4ef5950b88ac517bd1dd794a0.png" width="20" class="mr-5" alt="" />
+Russian
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="de" href="https://www.onelife.eu/de/press-room">
+<img src="../uploads/media/default/0001/01/a344e1d1889f05951af0c61f2402e9a6c4f6ce63.png" width="20" class="mr-5" alt="" />
+German
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="ja" href="https://www.onelife.eu/ja/press-room">
+<img src="../uploads/media/default/0001/01/309ff6dacc9bbd54a0de4ca349fbbf176a7273bc.png" width="20" class="mr-5" alt="" />
+日本語
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-line">
+<div class="container">
+<div class="row">
+<nav class="navbar" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+<a class="navbar-brand navbar-left" href="index.html">
+<img title="" alt="oneLife" src="../bundles/onecoinonelifeopen/images/logoab8e.png?201710241251" itemprop="logo" class="logo">
+</a>
+
+</div>
+<div id="navbar" class="collapse navbar-collapse">
+<ul class="nav navbar-nav  navbar-right">
+<li class="first"> <a href="index.html">
+Home
+</a>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+About
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="about.html">
+Our culture
+</a>
+</li>
+<li class="last"> <a href="faq.html">
+FAQ
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Membership
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="oneacademy.html">
+oneacademy
+</a>
+</li>
+<li> <a href="onecoincloud.html">
+onecoincloud
+</a>
+</li>
+<li> <a href="onetablet.html">
+onetablet
+</a>
+</li>
+<li class="last"> <a href="signup.html">
+Join us
+</a>
+</li>
+</ul>
+</li>
+<li class="active dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Media Center
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="news.html">
+News &amp; Press Releases
+</a>
+</li>
+<li class="active"> <a href="press-room.html">
+Press Room
+</a>
+</li>
+<li class="last"> <a href="resource-center.html">
+Resources
+</a>
+</li>
+</ul>
+</li>
+<li> <a href="opportunity.html">
+Opportunity
+</a>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+ Positive impact
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="positive-impact/mission.html">
+Our mission
+</a>
+</li>
+<li class="last"> <a href="positive-impact/projects.html">
+Our projects
+</a>
+</li>
+</ul>
+</li>
+<li> <a href="blog.html">
+Blog
+</a>
+</li>
+<li class="last"> <span>
+<button type="button" id="loginBtn" class="btn red-btn login-btn btn-lg" data-toggle="modal" data-target="#login-modal">LOGIN
+</button>
+</span>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<div class="border-bottom wallpaper-inner" style="background-image: url(../uploads/media/default/0001/01/d3ed2f19cc6bc9bf84d1ed2400f3e97a544d8e49.jpg);">
+<div class="relative">
+<div class="inner-position">
+<h1 class="header-big uppercase font-bebas-bold">
+</h1>
+<div class="text">
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<section class="faq-section">
+<div class="panel-group" id="accordion">
+<div class="panel" itemscope itemtype="http://schema.org/Question">
+<div class="mb-40">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1" itemprop="name">
+What is the OneLife Network?
+</a>
+</h4>
+</div>
+<div id="collapse1" class="panel-collapse collapse" itemprop="suggestedAnswer" itemscope itemtype="http://schema.org/Answer">
+<div class="panel-body" itemprop="text">
+<p>The OneLife Network is a growing global network that was born out of the OneCoin cryptocurrency brand. OneCoin is a digital currency and, just like the serial number on a paper bill, each digital coin is unique. OneCoin has its own website, <a href="https://www.onecoin.eu/en/">OneCoin.eu</a>, where you can learn more about the digital currency itself, the OneCoin blockchain and its pioneering transparency measures.<br />
+<br />
+When mining OneCoins, users become part of a global network of millions of OneCoin miners, called the <strong>OneLife Network.</strong> The OneLife Network business model is based on a direct sales concept, in which members can profit by referring and selling our products, educational packages about cryptocurrency and financial management called <strong>OneAcademy</strong>.<br />
+<br />
+Since its establishment in 2014, OneCoin has been dedicated to creating a coin suitable for mass-market usage that is in line with its vision to provide access to financial services for everyone. With an ever-growing mining community and network-marketing structure, there is now an ecosystem of OneLife products, financial solutions and charity projects surrounding the original OneCoin brand and the expansive Network. </p>
+</div>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" itemprop="name">
+What are the OneLife Network products?
+</a>
+</h4>
+</div>
+<div id="collapse2" class="panel-collapse collapse" itemprop="suggestedAnswer" itemscope itemtype="http://schema.org/Answer">
+<div class="panel-body" itemprop="text">
+<strong>OneAcademy</strong>, a suite of e-learning courses, is the OneLife Network&rsquo;s first &ndash; and most popular &ndash; product line. From a free rookie package to the master infinity trader, OneAcademy offers options for financially-interested students at different budget levels. <br />
+<br />
+<strong>OneCoinCloud</strong> offers unique cloud-based products for people looking for storage solutions with client-side encryption functionality. All CoinCloud packages provide secure data-storing options, since only the user can lock and unlock files. <br />
+<br />
+<strong>OneTablet </strong>is the OneLife Network&rsquo;s first physical, premium-line product. Equipped with the latest tablet features, the OneTablet offers tools to enhance the learning, mining and trading experience.<br />
+<br />
+The OneLife Network plans to unveil even more innovative products in the future.
+</div>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" itemprop="name">
+What is OneAcademy?
+</a>
+</h4>
+</div>
+<div id="collapse3" class="panel-collapse collapse" itemprop="suggestedAnswer" itemscope itemtype="http://schema.org/Answer">
+<div class="panel-body" itemprop="text">
+<strong>OneAcademy</strong> is an innovative e-learning platform covering a broad range of financial topics including trading, the stock exchange, cryptocurrency, financial analysis, asset management and more. The seven-level program, developed by finance experts and academics, is highly-structured and easy to understand. <br />
+<br />
+The courses do not serve as a OneCoin mining manual. They, instead, provide a detailed look into financial management and teach about current financial trends that influence the global financial structure. OneAcademy contains seven levels and provides innovative resources for students such as videos, presentations and tests.<br />
+<br />
+Three important notes: 1) You <u>cannot</u> mine OneCoins if you do not learn about financial markets with OneAcademy first, 2) You do receive promotional tokens which you can submit to mine just by signing up for OneAcademy; it is <u>your choice</u> as the customer about how to move forward, and 3) You <u>can</u> purchase educational products with OneAcademy <u>without</u> choosing to take advantage of the OneLife Network&rsquo;s bonus and commissions plan.
+</div>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4" itemprop="name">
+What is the OneWorld Foundation?
+</a>
+</h4>
+</div>
+<div id="collapse4" class="panel-collapse collapse" itemprop="suggestedAnswer" itemscope itemtype="http://schema.org/Answer">
+<div class="panel-body" itemprop="text">
+The<strong> OneWorld Foundation</strong> was founded in 2015 after the success of OneCoin to help underprivileged communities by providing access to education and access to information. The Foundation focuses on supporting youth and talent, and investing time and efforts in creating an environment of positive impact for the next generation of leaders.
+</div>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5" itemprop="name">
+Who is OneLife Founder Dr. Ruja Ignatova?
+</a>
+</h4>
+</div>
+<div id="collapse5" class="panel-collapse collapse" itemprop="suggestedAnswer" itemscope itemtype="http://schema.org/Answer">
+<div class="panel-body" itemprop="text">
+Dr. Ruja Ignatova is the founder of OneCoin, the OneLife Network and OneAcademy. Born in Sofia, Bulgaria, Dr. Ignatova now runs a company that is present in almost every country and six continents.<br />
+<br />
+She grew up in Bulgaria until age 10 when she moved to Germany. For a young, hard-working female foreigner, the transition was not easy, and Dr. Ignatova had to learn a new language and begin proving herself. She lived in Germany as both a student and then as a businesswoman and developed her entrepreneurial spirit there. She received a Ph.D. in Law from the University of Konstanz, a degree in Law from the University of Oxford (M.Jur) and a Master&rsquo;s Degree in Law from the University of Konstanz and Economics from the University of Hagen. Prior to founding OneCoin, Dr. Ignatova was an Associate Partner at McKinsey &amp; Company and led one of the largest asset management funds in Bulgaria, CSIF, where she managed more than &euro;250 million.<br />
+<br />
+Dr. Ignatova was named &ldquo;<a href="http://blife.bg/article-33439">Businesswoman of the Year</a>&rdquo; in Bulgaria by Lord Evgeni Minchev in 2014 and &ldquo;International Businesswoman of the Year&rdquo; in 2012. Called the &ldquo;<a href="https://www.facebook.com/Dr.RujaIgnatova/">Cryptoqueen</a>&rdquo; by some, Dr. Ignatova has become one of the top cryptocurrency experts and visionaries in the world.
+</div>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6" itemprop="name">
+Where is the OneLife Network present? Where are the offices located?
+</a>
+</h4>
+</div>
+<div id="collapse6" class="panel-collapse collapse" itemprop="suggestedAnswer" itemscope itemtype="http://schema.org/Answer">
+<div class="panel-body" itemprop="text">
+The OneLife Network has a presence spanning across <strong>six continents</strong> and is felt in <strong>almost every country</strong>. <br />
+<br />
+The company&rsquo;s main operational and administrative office is in <strong>Sofia, Bulgaria</strong> and moved into a brand-new office space in early 2016. With over 150 OneCoin and OneLife employees, there is also an operations center in <strong>Hong Kong</strong>.<br />
+<br />
+While there is very little information like this available about other cryptocurrency companies, OneCoin does not keep its Network&rsquo;s global presence or office locations a secret.
+</div>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse10" itemprop="name">
+Can I join the OneLife Network without buying a package?
+</a>
+</h4>
+</div>
+<div id="collapse10" class="panel-collapse collapse" itemprop="suggestedAnswer" itemscope itemtype="http://schema.org/Answer">
+<div class="panel-body" itemprop="text">
+Yes, you can join the OneLife Network without buying any of the packages. Simply sign up for a free Rookie position. If you are a hard worker, you can earn promotional tokens without spending any money at all. You can earn &ldquo;BV points&rdquo; from a personal purchase to qualify for promotional tokens, or take the opportunity to invite people to the OneLife Network. You earn 25% BV on all their personally-purchased BVs &ndash; and can easily qualify for promotional tokens. For example, you can join the OneLife Network for free &ndash; invite four friends who personally purchased a Trader package &ndash; and you qualify for the number of promotional tokens as a Trader yourself.<br />
+</div>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse11" itemprop="name">
+As a member of the OneLife Network, how do I qualify for promotional tokens to mine the OneCoin cryptocurrency?
+</a>
+</h4>
+</div>
+<div id="collapse11" class="panel-collapse collapse" itemprop="suggestedAnswer" itemscope itemtype="http://schema.org/Answer">
+<div class="panel-body" itemprop="text">
+The OneLife Network has two options for you to obtain promotional tokens:<br />
+1) By purchasing a package at the Starter level or higher, a certain number of promotional tokens will be provided. You can see the number of promotional tokens provided per package level on the <a href="https://www.onelife.eu/">OneLife website</a><a href="index.html">.</a><br />
+2) Simply by joining the OneLife Network for free and recruiting people to join the OneLife Network, you can earn promotional tokens as well.<br />
+<br />
+As a note of clarification, tokens are instruments provided by the company on a promotional basis. They provide access to the OneCoin mining pools, but please note that the company does not guarantee that your tokens will mine coins, nor how many coins can be received.
+</div>
+</div>
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse12" itemprop="name">
+Where can I find out more about OneLife and related brands?
+</a>
+</h4>
+</div>
+<div id="collapse12" class="panel-collapse collapse" itemprop="suggestedAnswer" itemscope itemtype="http://schema.org/Answer">
+<div class="panel-body" itemprop="text">
+<ul>
+<li><a href="http://onelife.eu/"><strong><u>OneLife.eu</u></strong></a> is the online hub for the network of over two million OneCoin users. The OneLife Network website provides information about new products, such as the first physical OneCoin product &ndash; the OneTablet.</li>
+<li><a href="https://www.onecoin.eu/"><strong><u>OneCoin.eu</u></strong></a> houses the latest news and information about the OneCoin cryptocurrency itself, legal documents, and details on compliance, the OneCoin blockchain and cryptocurrency in general. </li>
+<li><a href="http://oneacademy.eu/"><strong><u>OneAcademy.eu</u></strong></a><strong> </strong>is the website for the OneLife Network&rsquo;s most successful product &ndash; a suite of innovative cryptocurrency educational materials. The seven-training courses are newly-remodeled to reflect the latest financial trends, and some of the most successful international business experts demystify cryptocurrency by providing OneAcademy students with illuminating lessons.</li>
+<li><strong><u><a href="http://oneworldfoundation.eu/en/">OneWorldFoundation.eu</a></u> </strong>is the home for the nonprofit organization helping provide underprivileged communities with access to education and access to information. </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<section class="mb-40">
+<div class="container">
+<div class="text-center mb-20">
+Preview or download our Press Kit to find out more information about the company.
+</div>
+<div class="row">
+<div class="col-sm-offset-4 col-sm-4">
+<a href="https://www.onelife.eu/uploads/media/default/0001/01/ca532f140a7cd7d4891ae56b8c8ee38ffc981927.pdf" target="pdf-frame" class="btn blue-btn  mb-10 ml-5 mr-5 uppercase block">Press Kit</a>
+</div>
+</div>
+</div>
+</section>
+<section class="contacts-section text-center">
+<div class="contacts-holder mb-40">
+<div class="container">
+<div class="contact-fotm-holder mt-40">
+<span class="mb-20 block">
+You can reach our Press Department at <a href="https://www.onelife.eu/cdn-cgi/l/email-protection#770705120404371819a7c21b1e1112591202" target="_top" class="underline color-blue">
+<span class="__cf_email__" data-cfemail="611113041212210e0f">[email&#160;protected]</span>еlife.eu
+</a>
+or by using the <strong>contact form</strong>
+below where you can ask questions and easily submit your press credentials.
+</span>
+<button class="underline mb-20 block color-blue" data-toggle="modal" data-target="#press-credential-conditions-modal" style="border: none; background: none; width: 100%;">
+Click here to read more about our press credential conditions
+</button>
+
+<div class="modal fade popup-modal" id="press-credential-conditions-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">X</span>
+</button>
+</div>
+<div class="modal-body text-left styled-dynamic-text">
+<h4 class="modal-title uppercase fs-22 mb-10" id="myModalLabel">
+PRESS CREDENTIAL CONDITIONS
+</h4>
+<p>To avoid misrepresentations, the OneLife Press Department requests you send your inquiry along with a valid national press card or a press card issued by the International Federation of Journalists.</p>
+<p>If you don&#39;t have a valid national press card, please provide a scanned copy of a letter by your editor-in-chief or your head office confirming you are part of their organization (including their contact details). The letter should include the duration and specific details of the assignment and reach of the outlet (print circulation, radio/television audience and/or statistical number website hits). </p>
+<p>Please also be ready to provide, upon request:</p>
+<ul>
+<li>Independent broadcast or film production companies: A letter from a broadcast organization or film distributor which has committed to air or distribute the work.</li>
+<li>Print media: Two by-lined articles published within the past month and a copy of the publication.</li>
+<li>Radio and TV media: Two recordings of reports broadcast within the month of your request.</li>
+<li>Photographers: An original tear sheets or photos with credits of the issuing organization.</li>
+<li>Online media: Two by -lined articles within the month of your request that were posted on the website, in addition to evidence the website belongs to a recognized media organization with a specific, verifiable street address and a telephone number; and has at least 60% original news content, commentary or analysis.</li>
+<li>Freelance Journalists: Clear documentation that they are on assignment from a specific news organization or publication, i.e. a valid assignment letter from that news organization, or publication.</li>
+</ul>
+<p>OneLife retains the right to decline a press inquiry if the aforementioned requirements are not met. Those cases should not be treated as a refusal for an official statement,unless acknowledgement is provided that the non-media outlet did not provide valid press qualifications. Any mention of the company that disregards this notice may face legal action.</p>
+<p>Please note that, if valid credentials are provided, the OneLife Press Department will ask for your work deadline and do its best to meet all reasonable timeframes requested.</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn red-btn uppercase" data-dismiss="modal">Close
+</button>
+</div>
+</div>
+</div>
+</div>
+<form name="press_center_form" method="post" enctype="multipart/form-data">
+<div class="row">
+<div class="col-sm-6 item mb-20 required">
+<input type="text" id="press_center_form_name" name="press_center_form[name]" required="required" class="js-name-input form-control" placeholder="Name" />
+</div>
+<div class="col-sm-6 item mb-20">
+<input type="text" id="press_center_form_surname" name="press_center_form[surname]" required="required" class="js-surname-input form-control" placeholder="Surname" />
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6 item mb-20 required">
+<input type="email" id="press_center_form_sender" name="press_center_form[sender]" required="required" class="js-email-input form-control" placeholder="Email" />
+</div>
+<div class="col-sm-6 item mb-20">
+<input type="text" id="press_center_form_workPhone" name="press_center_form[workPhone]" required="required" class="js-phone-input form-control" type="phone" placeholder="Work phone" />
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 mb-10 text-left">
+Please upload your Press credentials <span class="color-red fs-30">*</span>
+</div>
+<div id="dynamicInput">
+<div class="col-sm-12 item mb-10">
+<div id="press_center_form_attachments" class="js-attachments-input form-control-file file-upload-style"><div><div id="press_center_form_attachments_0"><div><label for="press_center_form_attachments_0_binaryContent"> </label><input type="file" id="press_center_form_attachments_0_binaryContent" name="press_center_form[attachments][0][binaryContent]" provider="sonata.media.provider.file" context="teams" /></div></div></div><div><div id="press_center_form_attachments_1"><div><label for="press_center_form_attachments_1_binaryContent"> </label><input type="file" id="press_center_form_attachments_1_binaryContent" name="press_center_form[attachments][1][binaryContent]" provider="sonata.media.provider.file" context="teams" /></div></div></div><div><div id="press_center_form_attachments_2"><div><label for="press_center_form_attachments_2_binaryContent"> </label><input type="file" id="press_center_form_attachments_2_binaryContent" name="press_center_form[attachments][2][binaryContent]" provider="sonata.media.provider.file" context="teams" /></div></div></div></div>
+</div>
+</div>
+<div class="col-sm-12 item mb-20 text-left">
+<input class="btn blue-btn add-more-files" type="button" style="padding: 5px 15px;" value="Add another file">
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 item mb-20">
+<input type="text" id="press_center_form_subject" name="press_center_form[subject]" required="required" class="js-subject-input form-control" placeholder="Subject" />
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 item mb-20 required">
+<textarea id="press_center_form_message" name="press_center_form[message]" required="required" class="js-subject-input form-control" required="required" placeholder="Message"></textarea>
+</div>
+</div>
+<button type="submit" id="press_center_form_submit" name="press_center_form[submit]" class="btn red-btn uppercase fs-25">Send</button>
+<input type="hidden" id="press_center_form__token" name="press_center_form[_token]" value="pNDWxIT7J3zRUqp0igiztCo-3-f5zhGh8zTVRd-szAo" /></form>
+</div>
+</div>
+</div>
+</section>
+<footer class="main-footer clearfix" itemtype="http://schema.org/WPFooter" itemscope="">
+<section class="link-section">
+<div class="container">
+<div class="row footer-navi-holder">
+<div class="col-xs-2 col-xs-offset-1 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">Site map</h3>
+<ul>
+<li><a href="index.html"><i class="fa fa-angle-right"></i>&nbsp;Home
+</a></li>
+<li><a href="about.html"><i class="fa fa-angle-right"></i>&nbsp;About</a></li>
+<li><a href="https://www.onelife.eu/user/signup"><i class="fa fa-angle-right"></i>&nbsp;Membership</a></li>
+<li><a href="opportunity.html"><i class="fa fa-angle-right"></i>&nbsp;Opportunity</a></li>
+<li><a href="positive-impact/mission.html"><i class="fa fa-angle-right"></i>&nbsp;Positive Impact</a>
+</li>
+<li><a href="blog.html"><i class="fa fa-angle-right"></i>&nbsp;Blog</a>
+</li>
+<li id="backoffice-login">
+<a href="javascript:void(0);">
+<i class="fa fa-angle-right"></i>&nbsp;Backoffice
+</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">&nbsp;AFFILIATED SITES</h3>
+<ul>
+<li class="first"> <a href="http://oneworldfoundation.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneWorld Foundation</a>
+</li>
+<li> <a href="https://www.oneacademy.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneAcademy</a>
+</li>
+<li> <a href="https://onecoin.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneCoin</a>
+</li>
+<li class="last"> <a href="https://www.onelifeevents.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneLife events</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">&nbsp;Media Center</h3>
+<ul>
+<li class="first"> <a href="news.html"> <i class="fa fa-angle-right"></i>&nbsp;News</a>
+</li>
+<li> <a href="press-room.html"> <i class="fa fa-angle-right"></i>&nbsp;Press Room</a>
+</li>
+<li class="last"> <a href="resource-center.html"> <i class="fa fa-angle-right"></i>&nbsp;Resources</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">legal</h3>
+<ul>
+<li class="first"> <a href="ima-agreement.html"> <i class="fa fa-angle-right"></i>&nbsp;IMA Agreement</a>
+</li>
+<li> <a href="http://onelife.eu/en/terms-and-conditions"> <i class="fa fa-angle-right"></i>&nbsp;T&amp;C</a>
+</li>
+<li> <a href="http://onelife.eu/en/global-compensation-plan"> <i class="fa fa-angle-right"></i>&nbsp;Global Comp. Plan</a>
+</li>
+<li class="last"> <a href="aml-policy.html"> <i class="fa fa-angle-right"></i>&nbsp;AML Policy</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">Help</h3>
+<ul>
+<li class="first"> <a href="http://support.onecoin.eu/User/Login"> <i class="fa fa-angle-right"></i>&nbsp;Support</a>
+</li>
+<li> <a href="http://onelife.eu/en/contacts"> <i class="fa fa-angle-right"></i>&nbsp;Contact Us</a>
+</li>
+<li class="last"> <a href="faq.html"> <i class="fa fa-angle-right"></i>&nbsp;FAQ</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-9 mb-30 bg-phone">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">download the onelife network app:</h3>
+<div class="row">
+<div class="col-sm-7">
+<div class="row">
+<div class="col-sm-4 col-xs-4 relative">
+<div class="">
+<a href="https://static.onelife.eu/OneLife-0.2.apk" target="_blank" class=""><img src="../bundles/onecoinonelifeopen/images/qr-onelifeab8e.jpg?201710241251" alt="android qrcode" class="qrcode-img" /></a>
+</div>
+</div>
+<div class="col-sm-8 col-xs-8">
+<div class="clearfix mb-15">
+<a target="_blank" href="https://play.google.com/store/apps/details?id=com.onelife.backend" class="pull-left mb-5 mr-5"><img src="../bundles/onecoinonelifeopen/images/google-playab8e.png?201710241251" alt="google play" /></a>
+<a target="_blank" href="https://itunes.apple.com/app/onelife-mobile/id1124062828" class="pull-left mb-5 "><img src="../bundles/onecoinonelifeopen/images/app-storeab8e.png?201710241251" alt="app store" /></a>
+</div>
+&lt; Direct download for Android
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">Social media:</h3>
+<div class="mb-10 social-links relative">
+<a href="https://www.facebook.com/One-Life-Network-1087166041305845/?fref=ts" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/b3448a74e5d87e16f637f69dc019d6679d32592b.png" alt="facebook" />
+</a>
+<a href="https://twitter.com/OneLife_Network" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/4b1b3ee93f72e40dcd46cd5ead7aced974071d20.png" alt="twitter" />
+</a>
+<a href="https://www.instagram.com/onelifenetworkofficial/" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/2d9f901f43465d23ae5646e65951e9ccef2be6b2.png" alt="instagram" />
+</a>
+<a href="https://www.youtube.com/channel/UC8fIpkNowRTSxwbOsYF1Wuw" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/b8a7ad1b67417aec7c5d5b9a21606a6911207689.png" alt="youtube" />
+</a>
+<a href="#" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/16a6892db9439f3a3817636397a1a98164621fc1.png" alt="" />
+</a>
+<a href="#" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/56632ebbd123485dcd328464d1f6b58e1815eb1c.png" alt="" />
+</a>
+<a href="javascript:void(0)" target="_blank" class="wechat-link">
+<img src="../uploads/media/default/0001/01/thumb_553_default_very_small.png" alt="WeChat" />
+</a>
+<img src="../uploads/media/default/0001/01/thumb_571_default_big.png" alt="" class="wechat-qr" />
+<a href="http://i.youku.com/i/UMzgxMzQ2NTc2OA==" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/33c605ff8abb8effc1d8e1f88201360c566a06ff.png" alt="youku" />
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="text-center mt-35 mb-35 bottom">
+<a href="index.html" class="block mb-20">
+<img src="../bundles/onecoinonelifeopen/images/logo-footerab8e.png?201710241251" alt="" class="logo-footer" width="300" />
+</a>
+<p>© onelife.eu</p>
+<p class="mt-15 fs-12">
+<em>
+ONELIFE NETWORK LTD, 2118 Guava Street, Belama Phase I, Belize City, Belize<br />
+</em>
+</p>
+</div>
+</footer>
+<script src="../cdn-cgi/scripts/78d64697/cloudflare-static/email-decode.min.js"></script><script>
+                    (function (i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r;
+                        i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                        a = s.createElement(o),
+                                m = s.getElementsByTagName(o)[0];
+                        a.async = 1;
+                        a.src = g;
+                        m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
+
+                    ga('create', 'UA-54134897-2', 'auto');
+                    ga('send', 'pageview');
+
+                </script>
+</div>
+</body>
+
+<!-- Mirrored from www.onelife.eu/en/press-room by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2017 07:08:11 GMT -->
+</html>

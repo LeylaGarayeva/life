@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Organization">
+
+<!-- Mirrored from www.onelife.eu/en/ima-agreement by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2017 07:09:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="keywords" content="" />
+<meta property="og:description" content="OneLife Description" /> <meta itemprop="description" content="OneLife Description"> <meta name="twitter:description" content="OneLife Description" />
+<meta property="og:image" content="../bundles/onecoinonelifeopen/images/logo.png" /> <meta property="og:image:width" content="300px" /> <meta property="og:image:height" content="200px" /> <meta itemprop="image" content="../bundles/onecoinonelifeopen/images/logo.png" /> <meta name="twitter:image" content="../bundles/onecoinonelifeopen/images/logo.png" />
+<meta property="og:title" content="OneLife" /> <meta itemprop="name" content="OneLife" /> <meta name="twitter:title" content="OneLife" /> <title>OneLife</title>
+<link rel="icon" href="https://www.onelife.eu/favicon.ico?201710241251" type="image/x-icon" />
+<link rel="stylesheet" href="../assets/css/compiledab8e.css?201710241251" />
+<script src="../assets/js/compiledab8e.js?201710241251"></script>
+</head>
+<body itemtype="http://schema.org/WebPage" itemscope="">
+<div class="site-size">
+<header class="main-header" itemtype="http://schema.org/WPHeader" itemscope="">
+<div class="top-line">
+<div class="container">
+
+<div class="modal fade" id="login-modal" role="dialog">
+<div class="modal-dialog">
+
+<div class="modal-content">
+<div class="modal-header login-modal-header">
+<button type="button" class="close" data-dismiss="modal">X</button>
+<h4 id="loginModalLabel" class="modal-title text-center">User authentication</h4>
+</div>
+<div class="modal-body">
+<div class="login-tab" role="tabpanel">
+
+<ul role="tablist" class="nav nav-tabs">
+<li class="active" role="presentation">
+<a data-toggle="tab" role="tab" aria-controls="signin" href="#signin" id="signin-taba" aria-expanded="true">
+Sign in
+</a>
+</li>
+<li role="presentation" class="">
+<a data-toggle="tab" role="tab" aria-controls="email-verification" href="#email-verification" id="email-verification-taba" aria-expanded="false">
+Send an email verification
+</a>
+</li>
+<li role="presentation" class="">
+<a data-toggle="tab" role="tab" aria-controls="forget_password" href="#forget_password" id="forgetpass-taba" aria-expanded="false">
+Forgot Password
+</a>
+</li>
+</ul>
+
+<div class="tab-content">
+<div id="signin" class="tab-pane text-center active" role="tabpanel">
+&nbsp;&nbsp;
+<span style="display: none;" class="response_error" id="login_fail">Login failed, please try again</span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/accounts/login/" method="POST" data-captcha="/captcha" data-recaptcha="/captcha?token=">
+<div class="form-group">
+<span id="login-error" class="col-xs-12 alert-danger help-block has-error color-red bold"></span>
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" name="username_login" id="login_username" class="form-control" tabindex="1">
+</div>
+<span id="login-username-error" class="help-block has-error"></span>
+</div>
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-lock"></i></div>
+<input type="password" placeholder="Password" name="password" id="password" class="form-control" tabindex="2">
+</div>
+<span id="password-error" class="help-block has-error"></span>
+</div>
+<div class="form-group mb-20 capcha">
+<div class="row">
+<div id="capcha-new-image" class="col-xs-8 no-robot border">
+<img id="capcha-image" src="#" alt="" style="width: 100%;" />
+</div>
+<div class="col-xs-3 no-robot border">
+<a href="#" class="">
+<i id="recaptcha" class="fa fa-refresh fa-4x"></i>
+</a>
+</div>
+<div class="col-xs-12 mt-10">
+<input id="captcha" name="captcha" type="text" class="form-control" tabindex="3">
+</div>
+</div>
+</div>
+ <button type="button" data-loading-text="Signing In...." class="btn red-btn btn-block bt-login" id="login_btn">
+Login
+</button>
+<input type="hidden" name="_csrf_token" value="0qF71DrCd8uYW_qT-VPQDceaHspUICCpYm-RW3V81kc">
+</form>
+</div>
+<div id="email-verification" class="tab-pane" role="tabpanel">
+&nbsp;&nbsp;
+<span style="display: none;" class="response_error" id="registration_fail">Failed, please try again</span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/accounts/sendVerEmail/" method="POST">
+<div class="form-group">
+<div id="verification_form_error" class="col-xs-12 alert-danger bottom10"></div>
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" id="femail" name="ver_code_username" class="form-control">
+</div>
+<span id="femail-error" data-error="0" class="help-block has-error"></span>
+</div>
+<button data-loading-text="Sending...." class="btn red-btn btn-block bt-login" id="send_verification_mail" type="button">
+Send
+</button>
+</form>
+</div>
+<div id="forget_password" class="tab-pane text-center" role="tabpanel">
+&nbsp;&nbsp;
+<span class="col-xs-12 alert-danger bottom10" id="reset_fail"></span>
+<div class="clearfix"></div>
+<form action="https://www.onelife.eu/tech/profile/changePasswordStep1">
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-user"></i></div>
+<input type="text" placeholder="Username" id="username" name="username" class="form-control">
+</div>
+<span id="username-error" data-error="0" class="help-block has-error"></span>
+</div>
+<div class="form-group">
+<div class="input-group">
+<div class="input-group-addon"><i class="fa fa-at"></i></div>
+<input type="text" name="email" placeholder="Email" id="remail" class="form-control">
+</div>
+<span id="remail-error" data-error="0" class="help-block has-error"></span>
+</div>
+<button data-loading-text="Please wait...." class="btn red-btn btn-block bt-login" id="reset_btn" type="button">
+Forgot Password
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="pull-right">
+<div class="topbar-search dropdown">
+<a href="#" class="dropdown-toggle white" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-lg fa-search"></i></a>
+<ul class="dropdown-menu pull-right">
+<li>
+<form name="" method="get" action="https://www.onelife.eu/en/search" class="input-group" data="js-search-form.html">
+<input type="search" id="search" name="search" required="required" class="form-control" placeholder="Search" />
+<span class="input-group-btn">
+<button class="btn btn-default"><i class="fa fa-search"></i></button>
+</span>
+</form>
+</li>
+</ul>
+</div>
+</div>
+<div class="languge pull-right pt-5">
+<div class="btn-group">
+<button type="button" class="language-dropdown-toggle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<span class="lang-ico pull-left" style="background-image:url('../uploads/media/default/0001/01/thumb_555_default_very_small.png')"></span>
+</button>
+<div class="dropdown-menu dropdown-menu-lang pl-10 pr-10">
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="en" href="ima-agreement.html">
+<img src="../uploads/media/default/0001/01/9a4b418c8c91f5216ae78864bf0ae59a178862b0.png" width="20" class="mr-5" alt="" />
+English
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="zh" href="https://www.onelife.eu/zh/ima-agreement">
+<img src="../uploads/media/default/0001/01/c4c40a553977a0364aeb4e3d7ecd20ac40778db1.png" width="20" class="mr-5" alt="" />
+简体中文
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="es" href="https://www.onelife.eu/es/ima-agreement">
+<img src="../uploads/media/default/0001/01/03a563bc29cdb439d57d6a67762d83555b777848.png" width="20" class="mr-5" alt="" />
+Español
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="pt" href="https://www.onelife.eu/pt/ima-agreement">
+<img src="../uploads/media/default/0001/01/1538ac2107f7b338495087cb45c8919d47819aa4.png" width="20" class="mr-5" alt="" />
+Português
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="ru" href="https://www.onelife.eu/ru/ima-agreement">
+<img src="../uploads/media/default/0001/01/68ddeb3c998439c4ef5950b88ac517bd1dd794a0.png" width="20" class="mr-5" alt="" />
+Russian
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="de" href="https://www.onelife.eu/de/ima-agreement">
+<img src="../uploads/media/default/0001/01/a344e1d1889f05951af0c61f2402e9a6c4f6ce63.png" width="20" class="mr-5" alt="" />
+German
+</a>
+<a class="dropdown-item block mb-5" rel="alternate" hreflang="ja" href="https://www.onelife.eu/ja/ima-agreement">
+<img src="../uploads/media/default/0001/01/309ff6dacc9bbd54a0de4ca349fbbf176a7273bc.png" width="20" class="mr-5" alt="" />
+日本語
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-line">
+<div class="container">
+<div class="row">
+<nav class="navbar" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+<a class="navbar-brand navbar-left" href="index.html">
+<img title="" alt="oneLife" src="../bundles/onecoinonelifeopen/images/logoab8e.png?201710241251" itemprop="logo" class="logo">
+</a>
+
+</div>
+<div id="navbar" class="collapse navbar-collapse">
+<ul class="nav navbar-nav  navbar-right">
+<li class="first"> <a href="index.html">
+Home
+</a>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+About
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="about.html">
+Our culture
+</a>
+</li>
+<li class="last"> <a href="faq.html">
+FAQ
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Membership
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="oneacademy.html">
+oneacademy
+</a>
+</li>
+<li> <a href="onecoincloud.html">
+onecoincloud
+</a>
+</li>
+<li> <a href="onetablet.html">
+onetablet
+</a>
+</li>
+<li class="last"> <a href="signup.html">
+Join us
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Media Center
+<b class="caret"></b>
+</a>
+<ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="news.html">
+News &amp; Press Releases
+</a>
+</li>
+<li> <a href="press-room.html">
+Press Room
+</a>
+</li>
+<li class="last"> <a href="resource-center.html">
+Resources
+</a>
+</li>
+</ul>
+</li>
+<li> <a href="opportunity.html">
+Opportunity
+</a>
+</li>
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Positive impact
+<b class="caret"></b>
+</a>
+ <ul class="menu_level_1 dropdown-menu">
+<li class="first"> <a href="positive-impact/mission.html">
+Our mission
+</a>
+</li>
+<li class="last"> <a href="positive-impact/projects.html">
+Our projects
+</a>
+</li>
+</ul>
+</li>
+<li> <a href="blog.html">
+Blog
+</a>
+</li>
+<li class="last"> <span>
+<button type="button" id="loginBtn" class="btn red-btn login-btn btn-lg" data-toggle="modal" data-target="#login-modal">LOGIN
+</button>
+</span>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<div class="wallpaper-inner" style="background-image: url(../bundles/onecoinonelifeopen/images/wallpaper/pageab8e.jpg?201710241251); min-height: 250px;"></div>
+<section class="text-page-section text-justify mt-40 mb-40">
+<div class="container">
+<div class="main-title">
+<h2>INDEPENDENT MARKETING ASSOCIATE AGREEMENT (“IMA Agreement”)</h2>
+<div class="line"></div>
+</div>
+<div class="styled-dynamic-text">
+<p>1. GENERAL</p>
+<p>The Independent Marketing Associate (&quot;IMA&quot;) Agreement, the Global Compensation Plan and the General Terms and Conditions (forming inseparable part of one document and entire agreement between the Company and its IMAs) explains and governs the relationship between each IMA and ONELIFE NETWORK LIMITED, CR 163,632, registered office address at 2118 Guava Street, Belama Phase I, Belize City, Belize (referred to hereafter as the &quot;COMPANY&quot;). Each IMA is required to read, understand, and comply with all terms and conditions of the Agreement. The Agreement shall constitute the entire understanding of the parties. All parts of this Agreement shall apply to the Registered IMA. By submitting the IMA Application/Agreement you hereby agree to all of the terms and conditions herein and by reference all legal terms and conditions.</p>
+<p>The Agreement is subject to revision by the Company from time to time at its sole discretion. The Agreement governs all aspects of the relationships between the Company and its IMAs and is available on the ONELIFE NETWORK website.</p>
+<p>2. BECOMING AN IMA</p>
+<p>To become an IMA, a new applicant is required to read and agree to the terms of the Agreement and relevant General Terms and Conditions of the Company. The application should be accurately completed in its entirety and the applicant(s), including all partners, shareholders and equity owners, must agree to the relevant General Terms and Conditions of the Company and the present IMA Agreement personally. Electronically submitted applications are considered as a received document. The Company reserves the right to reject any application at its sole discretion.</p>
+<p>PLEASE NOTE: applications will not be accepted from the following countries:</p>
+<p>Iran</p>
+<p>Iraq</p>
+<p>From any country whose applications would violate any of the applicable and relevant national, international or EU treaty, directive and/or regulations that may comply.</p>
+<p>IMAs may only market ONELIFE NETWORK system and services or recruit new IMAs in those countries officially authorized by the Company.</p>
+<p>Upon notification of acceptance by the Company, the new IMA will be entered into the Company database. If there are any errors on an application, IMAs should verify with the Company Support Department as soon as the error is discovered (within 24 hours) to avoid delays in any rights under the IMA Agreement.</p>
+<p>By submitting the IMA Application and supporting documents the IMA also agrees to the registration in the Onepay&rsquo; e-wallet platform. OnePay is a payment solution for accessing and transferring funds electronically. The personal information provided by the IMA will be used only to operate and administer the IMA&rsquo;s OnePay account. The IMA may choose to close his/her OnePay account at any time by contacting Company&#39;s Customer Support.</p>
+<p>Eligibility requirements to become an IMA are as follows:</p>
+<p>A. Legal Age. Any individual who is of legal age (18 years) and residing in a country where the Company is doing business is eligible to become an IMA.</p>
+<p>B. ID Number. An Identification Number is to be inserted on the application. This number should be either the Individual&rsquo;s Social Security Number, a Tax Identification Number, if applying as a business, or a government I.D., such as a passport number. Incorrect Tax I.D. Numbers or other essential information and/or supporting documentation can result in a EUR100 fine and/or termination.</p>
+<p>C. Legal Entity. If an Applicant is a corporation, partnership or other legal entity, all shareholder(s) of the corporate applicant, all partner(s) of the partnership or all owners of the legal entity applicant must agree to the application, a list of the names of each shareholder of the corporate Applicant, each partner of the partnership Applicant, or each owner if another legal entity must accompany the Application. All legal documentation should be submitted with the application, including but not limited to, articles of incorporation or organization, partnership agreements, regulations, charters, licenses, shareholder agreements, partnership agreements, and other pertinent legal information. The application can be rejected without such documentation.</p>
+<p>D. Change of your enrolling IMA. IMAs wishing to change their registering IMA can do so only by resigning and then waiting one (1) year before reregistering with a different IMA.</p>
+<p>E. Independent Contractors. IMAs are independent contractors. They are not franchisees, joint ventures, partners, employees or agents of the Company, and are prohibited from stating or implying whether orally or in writing, otherwise. IMAs have no authority to bind the Company to any obligation. The Company is not responsible for payment or co-payment of any employee benefits. IMAs are responsible for liability, health, disability, workmen&rsquo;s compensation and other insurance and for any other registration required by the laws of the country of residence of the IMA. IMAs set their own hours and determine how to conduct their ONELIFE NETWORK business and are responsible for their own management decisions subject to the IMA Agreement. The reference to &quot;position&quot; is as it applies to IMAs participation in the Global Compensation Plan and adherence to the IMA Agreement.</p>
+<p>3. CHANGES IN IMA STATUS</p>
+<p>A. Death. Upon the death of an IMA, the rights and responsibilities of the IMA are passed on to the rightful heir(s) as determined by a court of competent jurisdiction. The heir(s) must also confirm in writing within 6 months of the previous IMA&rsquo;s death that he or she shall be bound by the terms and conditions of the IMA Agreement.</p>
+<p>B. Divorce. Upon divorce, The Company must be notified as to which former spouse will assume ownership of the IMA position as determined by a court of competent jurisdiction. A change in the ownership of the IMA position will not take place until the Company receives a copy of the divorce documentation. Should the party who does not assume ownership of the IMA position desire to remain an IMA; he/she may do so by submitting a new IMA Application at the time the divorce documentation is submitted to the Company. He/she shall then be entered as a new IMA in accordance with the enrolment policy of the Company.</p>
+<p>C. Marriage. If two (2) existing IMAs marry, they may maintain their separate IMA positions.</p>
+<p>D. Dissolution of Corporate or Partnership IMA position. Upon the dissolution of a corporation or termination of a partnership, which owns the IMA position, the ownership of the IMA position will be transferred pursuant to the IMA Agreement among the shareholders or partners or upon order of a court of competent jurisdiction upon written notification to the Company. If one or more of the partners or shareholders in an IMA position terminates his/her on-going relationship with the Company by leaving the partnership or disposing of his/her share of equity holdings, such parties, including the departing party, shall continue to be bound by the terms of the IMA Agreement. If a dispute arises over the disposition of the partnership interest, or assets, or share holdings or corporate assets, or the income from the IMA position, the Company may suspend the IMA position and hold all commissions until the dispute over the disposition is resolved by agreement between the parties or by an order from a court of competent jurisdiction.</p>
+<p>E. Sale of an IMA position or any rights, direct or indirect, relating to an IMA position may not be transferred by the IMA without prior written approval from the Company, in its sole and absolute discretion. No sale will be approved unless it includes a covenant by the seller not to solicit his/her prior Group of IMAs for at least six (6) months after the effective date of the sale.</p>
+<p>An IMA position or any right thereto which is under suspension, on probation, or subject to any disciplinary action or any investigation by or on behalf of the Company, may not be sold or otherwise transferred while such condition continues.</p>
+<p>The Purchase and Sale Agreement must include a provision in which the parties agree upon the ownership of the inventory of the IMA position upon the sale. The Company shall not grant a refund on inventory from a person who sold his/her interest in an IMA position</p>
+<p>The seller may not reapply or purchase another IMA position for a period of twelve (12) months, either as an individual, partnership or corporation or other legal entity.</p>
+<p>The purchaser of an IMA position shall be responsible for all acts or omissions of the seller in contravention of the IMA Agreement for a period of six (6) months after the date of Company&#39;s approval of the sale or transfer. For purposes of this provision, the seller will be required to continue to comply with all post-termination obligations of the IMA Agreement.</p>
+<p>F. Mergers; Addition of Co-IMAs, Partners, Shareholders and/or Owners. Mergers will be permitted only between enroller and its first level. The Company reserves the right in its sole and absolute discretion to approve or disapprove any proposed merger or admission of Co-IMAs, partners, shareholders or other owners. The admission of a Co-IMA, partner, shareholder or other owner must create a bona fide business relationship and must not involve the addition of inactive persons or of entities or other persons or entities which &quot;pass through&quot; income to others.</p>
+<p>G. Withdrawal or Removal of Co-IMAs, Partners and/or Owners. If a Co-IMA, Partner or Owner is removed or withdrawn from the IMA position, the remaining IMA position shall be responsible for all acts or omissions in contravention of the IMA Agreement, of those who have left the IMA position, for a period of six (6) months after the date of the departure of the Co-IMA, Partner, or Owner for purposes of this provision, the seller will be required to continue to comply with all terms post-termination obligations of the IMA Agreement.</p>
+<p>Co-Ownership over IMA positions &ndash; in case of co-ownership over certain position the COMPANY will reflect this in its files. All relations between co-owners, including future activity of the IMAs &ndash; co-owners are exclusive responsibility of the IMAs. The Company is not responsible and cannot be held liable for any unsettled legal and financial relations and/or obligations between the co-owners.</p>
+<p>H. Name Change. An IMA may change the operating name of the IMA position by forwarding written notification to the Company. The Company reserves the right to request the Articles of Incorporation of a corporation or Partnership Agreement of a partnership, or any amendments pertaining thereto, as well as any other relevant documents or corporate or partnership documentation relating to ownership or control.</p>
+<p>I. Changing the registering/enrolling IMA. Except as set forth in Section 2 D, changing your enrolling IMA is not allowed. The IMA commission opportunity is a business built upon sales of products for consumption and upon the creation of relationships. Once a new IMA is referred or enrolled, the Company will protect this relationship to the fullest extent possible.</p>
+<p>J. Suspension of Commission Payments. If there is any question over the disposition of the IMA position or the income from the IMA position (whether by reason of an event described in A through J or otherwise), the Company may suspend the IMA and hold all commissions and bonuses until the dispute over the disposition is resolved by agreement between the parties or by an order from a court of competent jurisdiction.</p>
+<p>4. TAXES AND GOVERNMENTAL REPORTS</p>
+<p>A. Taxes. All IMAs are personally responsible for all taxes due on any earnings from the Company or on sales proceeds or earnings from selling ONELIFE NETWORK&rsquo;S products. The Company will provide a record of any and all moneys paid by the Company to each IMA and will issue and file such reports to governmental agencies or others as may be required by law. IMAs will not be treated as an employee of the Company for any income tax purposes. To safeguard that no tax evasion can occur, the IMA must give the Company personal identification information in their country of residence to which the Company can make payments through a designated payment facilitator of any amount due by the Company to the IMA.</p>
+<p>B. Sales Tax. The Company has its&rsquo; home office and will not be collecting sales tax at the time of purchase from any residents outside of the areas its location requires it to. No sales tax or VAT is foreseen on sales outside of the Company&rsquo;s primary location. If such tax would be levied, the IMA will immediately inform the Company, which will take appropriate action, including remitting, if needed the sales tax/VAT to the appropriate authority.</p>
+<p>5. IMA TRAINING PACKAGE REFERRER POLICY</p>
+<p>A. Every new IMA has a Referring IMA. Each new prospect has the right to choose who he/she buys his/her Training and Rewards Package from. An IMA shall not unduly influence or in any way entice prospects with representations as to possible income or business development, or payment of any compensation by an IMA or the Company.</p>
+<p>B. Dispute. The Company recognizes the Referring IMA as the IMA shown on the first entered original IMA Application completed, dated, and electronically entered into Company&rsquo;s database. .</p>
+<p>C. Training. IMAs who enroll other IMAs and sell Training Packages must thereafter use their best efforts to provide an on-going basis, bona fide supervision and training of these IMAs and their sales group. This should include ongoing contact, communication, encouragement and support of his/her sales organization. IMA&rsquo;s should encourage their IMA sales groups to complete the Company&rsquo;s Training Packages that they purchase.</p>
+<p>6. PLACEMENT POLICY</p>
+<p>An IMA is solely responsible for allocating the placement priority of new IMA that they enroll in their sales organizations structure. The IMA management tool is available in each IMAs online back-office. It is critical that the placement of a new IMA is correct at the time of the sale/enrollment.</p>
+<p>THE ORDER/PLACEMENT IN WHICH YOU RECORD THE IMA&rsquo;s YOU SELL/ENROLL IS FINAL. IT WILL NOT BE CHANGED.</p>
+<p>7. GLOBAL COMPENSATION PLAN AND TERMS</p>
+<p>See ONELIFE NETWORK web site &quot;Global Compensation Plan&quot; and future additions.</p>
+<p>The IMA acknowledges and agrees that the Company reserves the unequivocal right to change or modify the Company&rsquo;s General Terms and Conditions, the present IMA Agreement and Global Compensation Plan. The Company will notify the IMA about any changes to the Compensation Plan within a reasonable time.</p>
+<p>8. LIMITED RETURN POLICY</p>
+<p>IMAs are not required to purchase.</p>
+<p>The IMA may return purchased ONELIFE NETWORK products in the following circumstances (excluding personalized or customized items):</p>
+<p>The purchased package may only be refunded to the IMA in case he/she have not logged in for the period of 14 (fourteen) days, starting from the date of submission of the application. No refunds will be made after the IMA has logged into his account. By logging into an IMA account the Company considers that the IMA is accepting the Company&rsquo;s conditions and no refunds shall be made.</p>
+<p>The Company will process the return promptly upon verifying that the IMA is eligible for a refund. In most cases, the IMA should expect to receive the refund within 30 working days of receipt of the products by the Company. The IMA hereby confirms that he understands that the Company return policy will NOT cover situations where the IMA has already received commission payouts, or other benefits, as a result of using the ONELIFE NETWORK&rsquo;s products and/or services.</p>
+<p>CANCELLATIONS</p>
+<p>All refund requests must be made within 14 days of enrollment/purchase in accordance with the above stated conditions. The return request will deactivate the initial order instructions and it will delete the IMA&rsquo;s unique identification (user name) for the Training and Rewards Package. This cancellation policy is designed to protect the ALS training and education material because it is proprietary intellectual property. The IMA&rsquo;s activation and position in the compensation system will be cancelled. Any commissions paid to returnee will be deducted from the refund amount.</p>
+<p>Submit cancellations at support department and please provide IMA&#39;s username, payment proof and date of purchase.</p>
+<p>9. LIMITED LICENSE</p>
+<p>The Company has certain trademarks, service marks, trade names, slogans, symbols, and color schemes that are proprietary. Except for marketing materials, sample products, and advertising provided or sold to the IMAs by the Company, the IMA shall not use or display such trademarks, service marks, trade names, slogans, symbols, and color schemes without Company&rsquo;sprior written permission. IMA acknowledges that any right to use Company&rsquo;s trademarks and copyrighted materials is non-exclusive, and the Company has the right and sole discretion to grant others the right to use such trademarks and materials. IMA expressly recognizes that any and all good will affiliated with the trademarks and copyrighted materials (including goodwill arising from IMAs use) inures directly and exclusively to the benefit of the Company and is the property of the Company, and that, on expiration or termination of this IMA Agreement, no monetary amount shall be attributable to any goodwill affiliated with IMAs use of the trademarks or copyrighted materials.</p>
+<p>10. ADVERTISING</p>
+<p>Trademarks/Service Marks. IMAs shall not advertise ONELIFE NETWORK product or business opportunity in any way other than by use of authorized advertising or promotional materials made available to the IMA by the Company.</p>
+<p>A. IMAs are prohibited from using Company&rsquo;s trademarks, service marks, trade names, slogans, symbols, and color schemes in advertising in a manner that would suggest or imply that they are employed by or are agents of the Company. All advertisements must provide the name of an IMA only. IMAs shall not make any representations as to potential income to be received by a prospective IMA.</p>
+<p>B. No Reproduction. All ONELIFE NETWORK materials, whether printed, on film or produced by audio or video recording are copyrighted and may not be reproduced in whole or in part by IMAs or any other person unless authorized in writing by the Company.</p>
+<p>C. No Distribution. IMAs may not produce, use or distribute any information relative to the contents, characteristics, or properties of ONELIFE NETWORK products which has not been provided directly by the Company.</p>
+<p>This includes but is not limited to print, audio or online media.</p>
+<p>D. Deceptive Materials. IMAs may not produce, sell or distribute literature, films, audio recordings or video recordings which are deceptively similar in nature to those produced, published, and provided by the Company for its IMAs. An IMA may not purchase, sell, or distribute non-ONELIFE NETWORK materials that imply or suggest that said materials originate from the Company.</p>
+<p>E. Approved Vendors. Any and all support materials, e.g. promotional and premium items are to be sold and/or distributed only by the Company or Company&rsquo;s approved vendors.</p>
+<p>F. Telephone Use. IMAs may not answer the telephone and/or use any telephonic message device in a way that would represent or imply that they are employed by or are agents of the COMPANY.</p>
+<p>G. Listing of Name. IMAs may be listed in telephone directories white or yellow pages as follows:</p>
+<p>&quot;Smith, Jane and John, Independent Marketing Associate Address and/or Telephone Number&quot;</p>
+<p>H. Numbers. An IMA may list any contact number under the name of his/her IMAposition , as an IMA, and must not represent that he/she is employed by, or is an agent of the Company.</p>
+<p>I. Further Restrictions. The Company prohibits the use of its trademarks, service marks, trade names, slogans or symbols or any of its product trade names or any copyrighted materials through telephonic devices, including computer networks, facsimile machines or other automatic calling devices for the purpose of soliciting potential IMAs or potential members.</p>
+<p>J. Media Opportunities. Media opportunities are not individual sales opportunities. All media opportunities must be referred to Company&rsquo;s relevant department. IMAs must not have any contact with the media unless prior written authorization from the Company is received.</p>
+<p>K. Donations. IMAs are permitted to make personal donations of product or funds to an organization or program provided they do not represent the donation as being from the Company.</p>
+<p>L. Media Coverage. Donations may not be made for the purpose of soliciting media coverage. If the media solicits coverage of an event, Company&rsquo;s relevant department must be notified immediately to review the media opportunity.</p>
+<p>M. Business Cards. An IMA may order business cards in compliance with the requirements of the General Terms and Conditions and the relevant copyright legislation. Use of the Company&rsquo;s/ONELIFE NETWORK trademarks is permitted only after explicit written consent has been granted from the Company. Any non authorized use of the Company&rsquo;s trademarks presents a violation of the General Terms and Conditions and relevant sanctions will be imposed. If an IMAs relationship with the ONELIFE NETWORK is terminated, he/she must immediately cease using and destroy all business cards utilizing Company&rsquo;s trademarks, trade names, services marks, logos or color schemes.</p>
+<p>N. Repackaging. IMA may not re-label, repackage, or modify ONELIFE NETWORK&rsquo;s packaged or virtual training materials in any way.</p>
+<p>O. No Endorsements. No endorsements by a Company officer or administrator or third parties may be asserted, except as expressly communicated in Company&rsquo;s literature and communications. IMAs may not represent or imply, directly or indirectly, that the ONELIFE NETOWRK system, programs, products or services have been approved or endorsed by any governmental agency.</p>
+<p>P. Internet Policy. IMAs may not advertise or promote their IMA business or Company&rsquo;s business, products or Global Compensation Plan or use Company&rsquo;s name in any electronic media or transmission, including on the Internet via web sites or otherwise, without the prior written approval of the Company, whose approval may be withheld at its sole discretion. If written approval is given, IMAs must abide by the guidelines set forth by the Company, including but not limited to the following:</p>
+<p>(i) IMAs shall not make offers or solicitations in the guise of research, surveys or informal communication, when the real intent is to sell products or services or sponsor IMAs;</p>
+<p>(ii) IMAs operating on-line websites, whether or not they collect personal information from individual members, shall disclose to the member in a prominent place on the website how the member&#39;s information will be used and must follow any laws regulating the handling of personal data;</p>
+<p>(iii) IMAs sharing personal information collected on-line should provide individual members with an opportunity to prohibit the dissemination of such information, and if any member requests that his or her personal information not be shared, IMAs shall refrain from sharing such information;</p>
+<p>(iv) IMAs shall provide individual members the option to terminate any further communication between the IMAs and the member and if any member requests that an IMA cease communication, the IMA should immediately stop communicating upon such request;</p>
+<p>(v) IMAs must abide by all laws and regulations regarding electronic communications, including but limited to any provision requiring prior consent for unsolicited contacts via electronic media;</p>
+<p>(vi) IMAs may not distribute content by use of distribution lists or to any person who has not given specific permission to be included in such a process; spamming or distribution of chain letters or junk mail is not allowed;</p>
+<p>(vii) IMAs may not distribute content that is unlawful, harassing, libelous, slanderous, abusive, threatening, harmful, vulgar, obscene, or otherwise objectionable material or which could otherwise give rise to civil liability or otherwise violate any applicable local, state, national or international law or regulation; and</p>
+<p>(viii) IMAs may not send bulk unsolicited e-mails to persons who have not requested information. Spam is strictly prohibited</p>
+<p>Q. Sales Presentations. At sales presentations, IMAs shall truthfully identify themselves, their products, and the purpose of their business to prospective members. IMAs may not use any misleading, deceptive, or unfair sales practices. Explanation and demonstration of products offered shall be accurate and complete including, but not limited to, with regard to price, terms of payment, right of withdrawal, refund rights, guarantees, and after-sales services and delivery. Personal or telephone contacts shall be made in a reasonable manner and during reasonable hours to avoid intrusiveness. IMAs must immediately discontinue a demonstration or sales presentation upon the request of the member. IMAs shall not directly or by implication, denigrate any other company or product. IMA shall refrain from using comparisons which are likely to mislead and which are incompatible to the principles of fair competition. Points of comparison shall not be unfairly selected and shall be based on facts which can be substantiated. IMA shall not abuse the trust of individual members, shall respect the lack of commercial experience of members and shall not exploit a potential member&rsquo;s age, illness, lack of understanding or lack of language expertise. IMA&#39;s may not systematically entice or solicit direct sellers from other direct selling organizations.</p>
+<p>11. DELAYS</p>
+<p>The Company shall not be responsible for delays and failures in performance of its obligations when performance is made commercially impracticable due to circumstances beyond its reasonable control. This includes, without limitation, strikes, labor difficulties, riots, wars, fires, death, curtailment of a party&rsquo;s source of supply, or government decrees.</p>
+<p>12. RENEWAL</p>
+<p>The term of the IMA Agreement is for an indefinite period and may be terminated by both parties at any time, even within the contractual period, with one month&rsquo;s notice prior to the end of the next calendar month.</p>
+<p>13. CONFLICTS OF INTEREST AND CONFIDENTIALITY</p>
+<p>Conflict of Interest. IMA&rsquo;s are free to participate in other multilevel or network marketing business ventures to the extent that such are not competitors of the Company. If IMAs are simultaneously active for several companies or network marketing companies, they agree to organize their business activities (along with their respective downlines) in such a way as to avoid any connection or mixing of their activities for these other companies with their activities for ONELIFE NETWORK. In particular, IMAs may not offer products other than ONELIFE NETWORK&rsquo;s products and services at the same time, in the same place or in the immediate vicinity or on the same website, Facebook page or other social media/online platform.</p>
+<p>(2) IMAs are also prohibited from recruiting other ONELIFE NETWORK IMAs for the sale of other companies products.</p>
+<p>(3) IMAs are also prohibited from violating - by entering into another contract &ndash; the rights of other IMAs or other sales contracts concluded with further companies and the clauses of which are still valid.</p>
+<p>Confidentiality. During the term of the IMA Agreement, the Company may supply to IMAs confidential information, including, but not limited to members&#39; lists, member specific information developed by the Company or developed for and on behalf of the Company by IMAs, (including, but not limited to, members and IMA profiles and product purchase information), IMA lists, manufacturer and supplier information, business reports, commission or sales reports and such other financial and business information which the Company may designate as confidential. All such information (whether in written or electronic form) is proprietary and confidential to the ONELIFE NETWORK and the Company and is transmitted to IMAs in strictest confidence on a &quot;need to know&quot; basis for use solely in IMAs business with ONELIFE NETWORK. IMAs must keep such information confidential and must not disclose any such information to any third party, directly, or indirectly. IMAs must not use the information to compete with the Company or for any purpose other than promoting ONELIFE NETWORK&rsquo;s program and its products and services. Upon expiration, non-renewal or termination of the IMA Agreement, IMAs must continue to keep such information confidential, discontinue the use of such confidential information and promptly return any confidential information in their possession and all copies thereof to the Company.</p>
+<p>14. PRODUCT ORDER/SALES &amp; RETURNS</p>
+<p>IMAs are registering with the ONELIFE NETWORK as an entrepreneur and not as a consumer and therefore do not have the statutory right to revoke thisagreement. Nevertheless, the Company is voluntarily granting you a right to rescind thisagreement within two weeks.</p>
+<p>Voluntary right of cancelation</p>
+<p>IMAs can revoke their agreement by providing written notice (by letter or email) within two weeks,without any need to provide cause. The two-week period begins once IMA submit his/her application. The deadline is considered met if the notice has been sent by the deadlines, as evidenced by the date of the postmark or email; the agreement may also be canceled by returning the starter kit by the same deadline.</p>
+<p>The revocation must be sent to Support email (<a href="https://www.onelife.eu/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="44373134342b3630042b2a21282d22216a2131">[email&#160;protected]</a>) or to Compliance (<a href="https://www.onelife.eu/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee8d81839e82878f808d8bae81808b8287888bc08b9b">[email&#160;protected]</a>)</p>
+<p>Consequences of cancellation:</p>
+<p>If the agreement is canceled, any benefits, payments, and/or services received by either party must be returned according the refund- and cancellation policy stated under &sect; 16 (8) and (9) in the General Terms and Conditions of the Company, to the other, together with any benefits derived from the same. At this time, we expressly indicate that the services are considered to have been used once the IMA has accessed the services electronically. If an IMA can not return the services received either in full or in part, or an IMA can only return them in a condition worse than that in which they were received, the specified IMA must reimburse for the loss in value. All payment refunds must be made within 30 days. For the IMA, the period begins when revocation notice is sent, and for the Company upon receipt of the same.</p>
+<p>An IMA may re-register with ONELIFE NETWORK after canceling their previous agreement, provided that said cancelation of the IMA was more than 12 months earlier and that the IMA has not since performed any activities for the ONELIFE NETWORK in the interim.</p>
+<p>The Company reserves the right to not refund IMA&rsquo;s for Training Packages/Events of its proprietary information that IMA has already used or participated in.</p>
+<p>15. PROHIBITED USAGE</p>
+<p>The excessive usage violation of the ONELIFE NETWORK website through traffic bots or list spamming is strictly prohibited. Violations of this policy can result in suspension or termination of the violating IMA.</p>
+<p>16. ERRORS OR QUESTIONS</p>
+<p>If an IMA has questions about or believes any errors have been made regarding commissions, bonuses, sales group activity reports, or charges, the IMA must notify the Company within five (5) working days of the date of the unreported error or incident in question. The Company will not be responsible for any errors, omissions or problems not reported to it within five working (5) days. The Company reserves the right to withhold any bonuses or other payments which it have to be paid and/or has been accrued by mistake due to technical malfunctions or other operational errors.</p>
+<p>17. CONTINUING DEVELOPMENT OBLIGATIONS</p>
+<p>Any IMA who wishes to participate in ONELIFE NETWORK and benefit from the Global Compensation Plan must perform a bona fide supervisory function to ensure that his or her sales group is properly operating his or her business. IMAs must have ongoing contact, communication and management supervision with the IMAs in their sales group. Examples of such contact and supervision may include, but not limited to: newsletters, written correspondence, personal meetings, telephone contact, voice mail and electronic mail and these contacts must not violate any part of the present IMA Agreement.</p>
+<p>18. NON-DISPARAGEMENT</p>
+<p>IMAs must not disparage other ONELIFE NETWORK IMAs, Company&rsquo;s products/services, the Global Compensation Plan, or Company&rsquo;s employees.</p>
+<p>19. OBJECTIONABLE ACTIVITY OR CONDUCT</p>
+<p>IMAs may not distribute material, have written correspondence, telephone contact, voice mail and/or electronic mail that is or contains unlawful, harassing, libelous, slanderous, abusive, threatening, harmful, vulgar, obscene, or otherwise objectionable material <strong><u>regarding the Company, its employees, partners or any other third party </u></strong>or which could otherwise give rise to civil liability or otherwise violate any applicable local, state, national or international law or regulation. <strong><u>In these cases the Company may cease any communication with the IMA and undertake further legal actions if relevant.</u></strong></p>
+<p>20. REPORTING POLICY VIOLATIONS</p>
+<p>IMAs observing a policy or agreement violation by another IMA should submit a written report of the violation directly to the attention of Company&rsquo;s Legal Department/Compliance Department. Details of the incidents such as dates, number of occurrences, persons involved, and any supporting documentation should be included in the report.</p>
+<p>21. DISPUTE RESOLUTION AND DISCIPLINARY PROCEEDINGS</p>
+<p>A. Disciplinary Sanctions. Violation of the present IMA Agreement, fraudulent, deceptive or unethical business conduct by any IMA may result, at Company&rsquo;s discretion, in one or more of the following corrective measures:</p>
+<p>1. Issuance of a written warning or admonition;</p>
+<p>2. Requiring the IMA to take immediate corrective measures;</p>
+<p>3. Imposition of a fine, which may be withheld from the account;</p>
+<p>4. Loss of rights to one or more bonus payments;</p>
+<p>5. Any other measure, which the Company deems practicable to implement to equitably resolve injuries caused partially or exclusively by the IMAs policy violation or contractual breach.</p>
+<p>6. Suspension of the individual&rsquo;s IMA position for one or more pay periods;</p>
+<p>7. Involuntary cancellation of the offending IMA position;</p>
+<p>8. Immediate removal of the IMA web site(s) and termination of the IMAs position;</p>
+<p>9. Any other measures expressly allowed within any provision of the General Terms and Conditions, the present IMA Agreement or allowed by law;</p>
+<p>The IMA is only entitled to a commission if he or she is not in violation of the the General Terms and Conditions and the present IMA Agreement.</p>
+<p>B. Reconsideration. In the event an IMA is suspended/ terminated and desires for his or her suspension/termination to be reconsidered, the Company must receive the request for reconsideration in writing within 15 days from the date of notice of suspension/ termination. If no request for reconsideration is received within the 15 day period, the termination will automatically be deemed final. If an IMA files a timely notice of request for reconsideration, the Company will review the request for reconsideration and notify the IMA of its decision within 10 days after receipt of the request for reconsideration. The decision of the COMPANY will be final and subject to no further review. In the event the suspension/ termination is not rescinded, the suspension/ termination will remain effective as of the date stated in the original termination notice.</p>
+<p>C. Grievances and Complaints. When an IMA has a grievance or complaint with another IMA regarding any practice or conduct in relationship to their respective ONELIFE NETWORK businesses, the complaining IMA should first report problem to their registering IMA who should review the matter. If the matter can not be resolved it must be reported in writing to the Support Department at the Company. The Company will review the facts and resolve it.</p>
+<p>D. Cost Effective Dispute Resolution/Waiver of Jury Trial.</p>
+<p>The Parties will act to amicably resolve questions and differences concerning structure, interpretation and effects of this IMA Agreement and other questions regarding the present agreementor the subject-matter of the latter.</p>
+<p>(2) Any dispute related to commercial and inter-companies matters shall be referred to and finally resolved by binding arbitration under the Arbitration Rules of which are deemed to be incorporated by reference into this clause, which shall include specifically:</p>
+<p>(a) The number of arbitrators shall be three. </p>
+<p>(c) The language to be used in the arbitral proceedings shall be English. Any documentation not presented in English shall be translated into English at the expense of the party submitting them. </p>
+<p>(3) Any disputes between the Company and its IMAs and clients, related to and in relation to these General Terms and Conditions and regarding to its existence, governance, validity or termination, shall be referred to and finally resolved by binding arbitration under the Arbitration Rules of the Arbitration Court at the Bulgarian Chamber of Commerce and Industry or The London Court of International Arbitration</p>
+<p>(4) the above under (2) and (3) mentioned does not prevent/restrict/exclude the implementation of any other mandatory rule and/or to bring an action before an ordinary court of the Country or EU Member State where the IMA has his/her/its usual place of residence or where One Life Network Ltd has suffered any damage arising from and/or in connection with the IMA Agreement and/or the Terms and Conditions.</p>
+<p>Notwithstanding the foregoing, the arbitrator shall have no jurisdiction over disputes relating to the ownership, validity, use or registration of any mark, copyright, or other intellectual property or proprietary or confidential information of the Company without Company&rsquo;s prior written consent. The Company may seek any applicable remedy in any applicable forum with respect to these disputes and with respect to money owing to the Company. In addition to monetary damages, the Company may obtain injunctive relief against any violation of the IMA Agreement or misuse of Company&rsquo;s trademarks, copyrights or confidential information.</p>
+<p>Nothing in this rule shall prevent the Company from terminating the IMA Agreement or from applying to and obtaining from any court having jurisdiction a writ of attachment, a temporary injunction, preliminary injunction and/or other injunctive or emergency relief available to safeguard and protect Company&rsquo;s interests prior to the filing of or during or following any arbitration or other proceeding or pending the handing down of a decision or award in connection with any arbitration or other proceeding.</p>
+<p>Nothing contained herein shall be deemed to give the arbitrator any authority, power or right to alter, change, amend, modify, add to, or to subtract from any of the provisions of the General Terms and Conditions, the present IMA Agreement or the Global Compensation Plan.</p>
+<p>22. NOTICES</p>
+<p>All notices to be given pursuant to the present IMA Agreement shall be deemed to have been properly given by depositing the notice in the mail, addressed to the subject IMA the last address on file with the Company, postpaid and registered or certified; or delivery by hand or by a recognized overnight delivery service; or by facsimile transmission; or by email. All notices shall be deemed given; ten (10) business days from the date of postmark, if sent by mail; seven (7) days after notice is deposited with a delivery service; or same day if delivered by hand or upon transmission by facsimile or by email.</p>
+<p>23. NON-WAIVER PROVISION</p>
+<p>Failure of the Company to exercise any right stated in the present IMA Agreement shall not constitute a waiver of Company&rsquo;s right to demand exact compliance therewith. Waiver by the Company of any breach of any provision of the present IMA Agreements shall not constitute a waiver of any prior, concurrent, or subsequent breach by the IMA. An authorized officer of the Company must issue the Waiver in writing.</p>
+<p>24. SEVERABILITY</p>
+<p>If under any applicable and binding law or rule of any applicable jurisdiction, any provision of the present IMA Agreement is held to be invalid or enforceable, the Company shall have the right to modify the invalid or unenforceable provision or any portion thereof, to the extent required to be valid and enforceable, and the IMA shall be bound by any such modification. The modification will be effective only in the jurisdiction in which it is required.</p>
+<p>25. LIMITATION OF DAMAGES</p>
+<p>TO THE EXTENT PERMITTED BY LAW, THE COMPANY AND ITS IMAs, OFFICERS, DIRECTORS, EMPLOYEES AND OTHER REPRESENTATIVES SHALL NOT BE LIABLE FOR, AND IMAs HEREBY RELEASE THE FOREGOING FROM, AND WAIVE ANY CLAIM FOR LOSS OF PROFIT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES WHICH MAY ARISE OUT OF ANY CLAIM WHATSOEVER RELATING TO COMPANY&rsquo;S PERFORMANCE, NON-PERFORMANCE, ACT OR OMISSION WITH RESPECT TO THE BUSINESS RELATIONSHIP OR OTHER MATTERS BETWEEN ANY IMA AND THE COMPANY, WHETHER SOUNDING IN CONTRACT, TORT OR STRICT LIABILITY. FURTHERMORE, IT IS AGREED THAT ANY DAMAGES TO AN IMA SHALL NOT EXCEED, AND IS HEREBY EXPRESSELY LIMITED TO THE AMOUNT OF UNSOLD COMPANY&rsquo;S PROGRAMS, SERVICES AND/OR PRODUCTS OWNED BY THE IMA AND ANY COMMISSIONS OWNED BY THE IMA.</p>
+<p>26. NO WARRANTIES</p>
+<p>THE COMPANY HEREBY DISCLAIMS ALL WARRANTIES. THE COMPANY MAKES NO REPRESENTATIONS ABOUT THE SUITABILITY, RELIABILITY, AVAILABILITY, TIMELINESS, AND ACCURACY OF THE SITE, THE SERVICE OR THE CONTENT CONTAINED ON THE SITE FOR ANY PURPOSE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SITE AND ALL SUCH CONTENT, SERVICES AND PRODUCTS ARE PROVIDED &quot;AS IS,&quot; &quot;WITH ALL FAULTS,&quot; AND &quot;AS AVAILABLE.&quot; WE DISCLAIM ALL WARRANTIES, EXPRESS AND IMPLIED, ARISING OUT OF, OR IN CONNECTION WITH, THE SITE, SERVICE AND CONTENT, INCLUDING, BUT NOT LIMITED TO THE WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE AND THOSE ARISING BY LAW, STATUTE, USAGE OF TRADE OR COURSE OF DEALING AND ANY LIABILITY WITH REGARD TO THE SITE, CONTENT AND SERVICES AND ANY ACTIONS RESULTING FROM IMA PARTICIPATION IN ANY SERVICE.</p>
+<p>IMA&rsquo;S USE OF THE SITE, SERVICE AND CONTENT IS AT HIS/HER SOLE RISK. ALTHOUGH OUR CONTENT MAY BE UPDATED FROM TIME TO TIME, IT MAY BE OUT OF DATE AND/OR MAY CONTAIN INACCURACIES OR TYPOGRAPHICAL ERRORS. WE ARE NOT RESPONSIBLE FOR THE IMA&rsquo;S INABILITY OR FAILURE (FOR ANY REASON) TO ACCESS THE SITE OR CONTENT OR OTHERWISE USE OR RECEIVE INFORMATION OR SERVICE FROM OR REGARDING THE SITE, CONTENT, OR IMA&rsquo;S PURCHASES FROM THE COMPANY. THE COMPANY DOES NOT WARRANT THAT THE SITE OR SERVICE WILL BE COMPATIBLE WITH ANY HARDWARE OR SOFTWARE SYSTEMS OR THAT THE SITE OR SERVICE WILL BE UNINTERRUPTED OR ERROR FREE. IMA ASSUMES THE RISK OF ANY AND ALL DAMAGE OR LOSS FROM USE OF, OR INABILITY TO USE, THE SITE OR SERVICE.</p>
+<p>THE COMPANY IS NOT RESPONSIBLE OR LIABLE FOR MAINTAINING ANY MEMBER DATA OR FOR THE DELETION, CORRUPTION, DESTRUCTION, DAMAGE, LOSS OR FAILURE OF ANY MEMBER DATA OR FOR ANY THIRD PARTY ACCESS TO ANY MEMBER DATA.</p>
+<p>THE COMPANY IS NOT RESPONSIBLE AND CANNOT BE HELD LIABLIE FOR INCORRECT USERNAMES AND OTHER DATA PROVIDED BY THE IMA.</p>
+<p>THE COMPANY IS NOT RESPONSIBLE AND MAY NOT BE HELD LIABLE FOR ANY ADDITIONAL BANK FEES, TAXES AND CURRENCY EXCHANGE RATES, THAT MAY RESULT IN ANY AMOUNTS TO BE ADDED TO THE ACCOUNT OF THE RESPECTIVE IMA.</p>
+<p>THE COMPANY MAKES NO WARRANTY OR REPRESENTATION AS TO THE LEVEL OF SUCCESS, IF ANY, INDIVIDUALS MAY ACHIEVE BY USING ANY OF THE COMPANY&rsquo;S SERVICES OR PRODUCTS. INDIVIDUAL RESULTS MAY VARY AND DEPEND ON MANY FACTORS INCLUDING AN INDIVIDUAL&#39;S SPECIFIC FINANCIAL SITUATION, EFFORTS AND ACTIONS.</p>
+<p>27. LIMITED LIABILITY</p>
+<p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE COMPANY AND IT&rsquo;S AFFILIATED PARTIES SHALL HAVE NO LIABILITY WHATSOEVER FOR IMA&rsquo;S USE OF ANY CONTENT OR OTHER INFORMATION OR SERVICE RELATED TO THE SITE, SERVICE OR PRODUCTS AND SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF BUSINESS, LOSS OF PROFITS, OR LITIGATION), (I) ARISING FROM ANY DECISION MADE OR ACTION TAKEN BY THE IMA IN RELIANCE UPON THE CONTENT OR OUR PRODUCTS OR SERVICE, (II) ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE USE OR PERFORMANCE OF THE SITE OR CONTENT, OR WITH THE DELAY OR INABILITY TO USE THE SITE, CONTENT, OR RELATED SERVICE, OR FROM THE USE OR MISUSE OF ANY INFORMATION, PRODUCTS, SERVICES, RELATED GRAPHICS, AND CONTENT OBTAINED THROUGH THE SITE, (III) ANY INCORRECT OR MISSING INFORMATION OR DATA, OR (IV) OTHERWISE ARISING OUT OR RESULTING FROM LOSS OF THE IMA&rsquo;S DATA OR INFORMATION, WHETHER BASED ON BREACH OF CONTRACT, BREACH OF WARRANTY, TORT (INCLUDING, BUT NOT LIMITED TO, NEGLIGENCE), OR OTHERWISE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. THE COMPANY&rsquo;S MAXIMUM LIABILITY, IF ANY, FOR ANY LOSS OR DAMAGE RELATING TO OR ARISING OUT OF THE USE OF THE SITE, SERVICES, PRODUCTS OR ANY CONTENT WILL NOT EXCEED THE LESSER OR ACTUAL DAMAGES OR THE CHARGES PAID BY IMA TO THE COMPANY FOR THE AUTO-SHIP AMOUNT FOR A PERIOD OF TWO MONTHS.</p>
+<p>THE COMPANY IS NOT RESPONSIBLE FOR INTERRUPTED, INACCESSIBLE OR UNAVAILABLE NETWORKS, SERVERS, SATELLITES, INTERNET SERVICE PROVIDERS, WEBSITES, OR OTHER CONNECTIONS, OR FOR MISCOMMUNICATIONS, FAILED, JUMBLED, SCRAMBLED, DELAYED, OR MISDIRECTED COMPUTER, TELEPHONE OR CABLE TRANSMISSIONS, OR FOR ANY TECHNICAL MALFUNCTIONS, FAILURES OR DIFFICULTIES.</p>
+<p>THE ABOVE LIMITATIONS AND EXCLUSIONS SHALL APPLY TO THE IMA TO THE FULLEST EXTENT THAT APPLICABLE LAW PERMITS, IN ALL ACTIONS OF ANY KIND, WHETHER BASED ON CONTRACT, TORT (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE) OR ANY OTHER LEGAL OR EQUITABLE THEORY. ANY CLAUSE DECLARED INVALID SHALL BE DEEMED SEVERABLE AND NOT AFFECT THE VALIDITY OR ENFORCEABILITY OF THE REMAINDER OF THE PRESENT IMA AGREEMENT.</p>
+<p>28. INCOME DISCLOSURE</p>
+<p>THE INCOME DISCLOSURE POSTED ON ONELIFE NETWORK WEBSITE IS INCORPORATED HEREIN BY REFERENCE AND IMAs HEREBY REPRESENT THAT THEY HAVE READ AND UNDERSTAND IT.</p>
+<p>29. PAYMENT METHODS ACCEPTED</p>
+<p>Currently for the comfort of its clients and partners the Company accepts various payment methods for the purchase of goods, main of which are as follows:</p>
+<p>Bank transfer</p>
+<p>Electronic transfer through OnePay e-wallet</p>
+<p><strong><u>The COMPANY warrants that the above stated list of payment methods may be modified from time to time.</u></strong></p>
+<p>30. INCOME STATEMENT</p>
+<p>An IMA&#39;s success depends in great part upon his or her skills, efforts, dedication, desire, and motivation. Becoming an IMA is NOT a guarantee of income.</p>
+<p>There is no purchase required of a ONELIFE NETWORK&rsquo;s product to receive referral sales commissions.</p>
+<p>Version of the present IMA Agreement: 08.09.2017</p>
+</div>
+</div>
+</section>
+<footer class="main-footer clearfix" itemtype="http://schema.org/WPFooter" itemscope="">
+<section class="link-section">
+<div class="container">
+<div class="row footer-navi-holder">
+<div class="col-xs-2 col-xs-offset-1 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">Site map</h3>
+<ul>
+<li><a href="index.html"><i class="fa fa-angle-right"></i>&nbsp;Home
+</a></li>
+<li><a href="about.html"><i class="fa fa-angle-right"></i>&nbsp;About</a></li>
+<li><a href="https://www.onelife.eu/user/signup"><i class="fa fa-angle-right"></i>&nbsp;Membership</a></li>
+<li><a href="opportunity.html"><i class="fa fa-angle-right"></i>&nbsp;Opportunity</a></li>
+<li><a href="positive-impact/mission.html"><i class="fa fa-angle-right"></i>&nbsp;Positive Impact</a>
+</li>
+<li><a href="blog.html"><i class="fa fa-angle-right"></i>&nbsp;Blog</a>
+</li>
+<li id="backoffice-login">
+<a href="javascript:void(0);">
+<i class="fa fa-angle-right"></i>&nbsp;Backoffice
+</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">&nbsp;AFFILIATED SITES</h3>
+<ul>
+<li class="first"> <a href="http://oneworldfoundation.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneWorld Foundation</a>
+</li>
+<li> <a href="https://www.oneacademy.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneAcademy</a>
+</li>
+<li> <a href="https://onecoin.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneCoin</a>
+</li>
+<li class="last"> <a href="https://www.onelifeevents.eu/en/" target="_blank"> <i class="fa fa-angle-right"></i>&nbsp;OneLife events</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">&nbsp;Media Center</h3>
+<ul>
+<li class="first"> <a href="news.html"> <i class="fa fa-angle-right"></i>&nbsp;News</a>
+</li>
+<li> <a href="press-room.html"> <i class="fa fa-angle-right"></i>&nbsp;Press Room</a>
+</li>
+<li class="last"> <a href="resource-center.html"> <i class="fa fa-angle-right"></i>&nbsp;Resources</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">legal</h3>
+<ul>
+<li class="first"> <a href="ima-agreement.html"> <i class="fa fa-angle-right"></i>&nbsp;IMA Agreement</a>
+</li>
+<li> <a href="http://onelife.eu/en/terms-and-conditions"> <i class="fa fa-angle-right"></i>&nbsp;T&amp;C</a>
+</li>
+<li> <a href="http://onelife.eu/en/global-compensation-plan"> <i class="fa fa-angle-right"></i>&nbsp;Global Comp. Plan</a>
+</li>
+<li class="last"> <a href="aml-policy.html"> <i class="fa fa-angle-right"></i>&nbsp;AML Policy</a>
+</li>
+</ul>
+</div>
+<div class="col-xs-2 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">Help</h3>
+<ul>
+<li class="first"> <a href="http://support.onecoin.eu/User/Login"> <i class="fa fa-angle-right"></i>&nbsp;Support</a>
+</li>
+<li> <a href="http://onelife.eu/en/contacts"> <i class="fa fa-angle-right"></i>&nbsp;Contact Us</a>
+</li>
+<li class="last"> <a href="faq.html"> <i class="fa fa-angle-right"></i>&nbsp;FAQ</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-9 mb-30 bg-phone">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">download the onelife network app:</h3>
+<div class="row">
+<div class="col-sm-7">
+<div class="row">
+<div class="col-sm-4 col-xs-4 relative">
+<div class="">
+<a href="https://static.onelife.eu/OneLife-0.2.apk" target="_blank" class=""><img src="../bundles/onecoinonelifeopen/images/qr-onelifeab8e.jpg?201710241251" alt="android qrcode" class="qrcode-img" /></a>
+</div>
+</div>
+<div class="col-sm-8 col-xs-8">
+<div class="clearfix mb-15">
+<a target="_blank" href="https://play.google.com/store/apps/details?id=com.onelife.backend" class="pull-left mb-5 mr-5"><img src="../bundles/onecoinonelifeopen/images/google-playab8e.png?201710241251" alt="google play" /></a>
+<a target="_blank" href="https://itunes.apple.com/app/onelife-mobile/id1124062828" class="pull-left mb-5 "><img src="../bundles/onecoinonelifeopen/images/app-storeab8e.png?201710241251" alt="app store" /></a>
+</div>
+&lt; Direct download for Android
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3 mb-30">
+<h3 class="font-bold fs-25 color-red mb-15 uppercase">Social media:</h3>
+<div class="mb-10 social-links relative">
+<a href="https://www.facebook.com/One-Life-Network-1087166041305845/?fref=ts" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/b3448a74e5d87e16f637f69dc019d6679d32592b.png" alt="facebook" />
+</a>
+<a href="https://twitter.com/OneLife_Network" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/4b1b3ee93f72e40dcd46cd5ead7aced974071d20.png" alt="twitter" />
+</a>
+<a href="https://www.instagram.com/onelifenetworkofficial/" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/2d9f901f43465d23ae5646e65951e9ccef2be6b2.png" alt="instagram" />
+</a>
+<a href="https://www.youtube.com/channel/UC8fIpkNowRTSxwbOsYF1Wuw" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/b8a7ad1b67417aec7c5d5b9a21606a6911207689.png" alt="youtube" />
+</a>
+<a href="#" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/16a6892db9439f3a3817636397a1a98164621fc1.png" alt="" />
+</a>
+<a href="#" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/56632ebbd123485dcd328464d1f6b58e1815eb1c.png" alt="" />
+</a>
+<a href="javascript:void(0)" target="_blank" class="wechat-link">
+<img src="../uploads/media/default/0001/01/thumb_553_default_very_small.png" alt="WeChat" />
+</a>
+<img src="../uploads/media/default/0001/01/thumb_571_default_big.png" alt="" class="wechat-qr" />
+<a href="http://i.youku.com/i/UMzgxMzQ2NTc2OA==" target="_blank" class="">
+<img src="../uploads/media/default/0001/01/33c605ff8abb8effc1d8e1f88201360c566a06ff.png" alt="youku" />
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="text-center mt-35 mb-35 bottom">
+<a href="index.html" class="block mb-20">
+<img src="../bundles/onecoinonelifeopen/images/logo-footerab8e.png?201710241251" alt="" class="logo-footer" width="300" />
+</a>
+<p>© onelife.eu</p>
+<p class="mt-15 fs-12">
+<em>
+ONELIFE NETWORK LTD, 2118 Guava Street, Belama Phase I, Belize City, Belize<br />
+</em>
+</p>
+ </div>
+</footer>
+<script src="../cdn-cgi/scripts/78d64697/cloudflare-static/email-decode.min.js"></script><script>
+                    (function (i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r;
+                        i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                        a = s.createElement(o),
+                                m = s.getElementsByTagName(o)[0];
+                        a.async = 1;
+                        a.src = g;
+                        m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
+
+                    ga('create', 'UA-54134897-2', 'auto');
+                    ga('send', 'pageview');
+
+                </script>
+</div>
+</body>
+
+<!-- Mirrored from www.onelife.eu/en/ima-agreement by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2017 07:09:25 GMT -->
+</html>
